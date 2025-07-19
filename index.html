@@ -1,213 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <base target="_self">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>John Doe | Computer Science Student</title>
-    <meta name="description" content="Portfolio of John Doe, Computer Science student showcasing projects, skills, and qualifications">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: "#3B82F6",
-                        secondary: "#1E40AF",
-                        accent: "#10B981"
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        mono: ['Fira Code', 'monospace']
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap');
-        
-        body {
-            scroll-behavior: smooth;
-        }
-        
-        .section {
-            scroll-margin-top: 80px;
-        }
-        
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
-        }
-        
-        .skill-bar {
-            transition: width 1.5s ease-in-out;
-        }
-    </style>
+    <title>Cultural Heritage Festival 2024 | Celebrating Tamil Culture</title>
+    <meta name="description" content="Join us for the Cultural Heritage Festival 2024 - A celebration of Tamil culture, traditions, and community. December 15th at Tamil Cultural Center.">
+    <meta property="og:title" content="Cultural Heritage Festival 2024 | Celebrating Tamil Culture">
+    <meta property="og:description" content="Join us for the Cultural Heritage Festival 2024 - A celebration of Tamil culture, traditions, and community. December 15th at Tamil Cultural Center.">
+    <meta property="og:type" content="website">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body class="font-sans bg-gray-50 text-gray-800">
+<body>
+    <!-- Language Toggle -->
+    <div class="language-toggle">
+        <button id="languageBtn" onclick="toggleLanguage()">
+            ENG | தமிழ்
+        </button>
+    </div>
+
     <!-- Navigation -->
-    <header class="fixed w-full bg-white shadow-sm z-10">
-        <nav class="container mx-auto px-6 py-4">
-            <div class="flex justify-between items-center">
-                <a href="#home" class="text-2xl font-bold text-primary">John Doe</a>
-                <div class="hidden md:flex space-x-8">
-                    <a href="#about" class="hover:text-primary transition">About</a>
-                    <a href="#education" class="hover:text-primary transition">Education</a>
-                    <a href="#skills" class="hover:text-primary transition">Skills</a>
-                    <a href="#projects" class="hover:text-primary transition">Projects</a>
-                    <a href="#contact" class="hover:text-primary transition">Contact</a>
-                </div>
-                <button id="mobile-menu-button" class="md:hidden text-gray-600">
-                    <i class="fas fa-bars text-2xl"></i>
-                </button>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <i class="fas fa-om"></i>
+                <span data-en="Cultural Heritage Festival" data-ta="கலாச்சார பாரம்பரிய விழா">Cultural Heritage Festival</span>
             </div>
-            <!-- Mobile menu -->
-            <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-2">
-                <a href="#about" class="block px-3 py-2 rounded hover:bg-gray-100">About</a>
-                <a href="#education" class="block px-3 py-2 rounded hover:bg-gray-100">Education</a>
-                <a href="#skills" class="block px-3 py-2 rounded hover:bg-gray-100">Skills</a>
-                <a href="#projects" class="block px-3 py-2 rounded hover:bg-gray-100">Projects</a>
-                <a href="#contact" class="block px-3 py-2 rounded hover:bg-gray-100">Contact</a>
+            
+            <div class="nav-menu">
+                <a href="#home" data-en="Home" data-ta="முகப்பு">Home</a>
+                <a href="#about" data-en="About" data-ta="அறிமுகம்">About</a>
+                <a href="#schedule" data-en="Schedule" data-ta="அட்டவணை">Schedule</a>
+                <a href="#speakers" data-en="Speakers" data-ta="பேச்சாளர்கள்">Speakers</a>
+                <a href="#partners" data-en="Partners" data-ta="கூட்டாளர்கள்">Partners</a>
+                <a href="#contact" data-en="Contact" data-ta="தொடர்பு">Contact</a>
             </div>
-        </nav>
-    </header>
+        </div>
+    </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="section min-h-screen flex items-center pt-20">
-        <div class="container mx-auto px-6 py-12 md:py-24">
-            <div class="flex flex-col md:flex-row items-center">
-                <div class="md:w-1/2 mb-12 md:mb-0">
-                    <h1 class="text-4xl md:text-5xl font-bold mb-4">Hi, I'm <span class="text-primary">John Doe</span></h1>
-                    <h2 class="text-2xl md:text-3xl font-semibold mb-6">Computer Science Student</h2>
-                    <p class="text-lg mb-8 text-gray-600 max-w-lg">
-                        Passionate about software development, problem solving, and creating impactful solutions. 
-                        Currently pursuing my degree while working on personal projects to expand my skills.
-                    </p>
-                    <div class="flex space-x-4">
-                        <a href="#projects" class="bg-primary hover:bg-secondary text-white px-6 py-3 rounded-lg font-medium transition">View My Work</a>
-                        <a href="#contact" class="border border-primary text-primary hover:bg-primary hover:text-white px-6 py-3 rounded-lg font-medium transition">Contact Me</a>
-                    </div>
+    <section id="home" class="hero">
+        <div class="hero-bg-pattern"></div>
+        <div class="hero-content">
+            <h1>
+                <span data-en="Cultural Heritage" data-ta="கலாச்சார பாரம்பரியம்">Cultural Heritage</span><br>
+                <span class="hero-highlight" data-en="Festival 2024" data-ta="விழா 2024">Festival 2024</span>
+            </h1>
+            
+            <p class="hero-tagline" data-en="Celebrating the Rich Traditions and Vibrant Culture of Tamil Heritage" data-ta="தமிழ் பாரம்பரியத்தின் வளமான மரபுகள் மற்றும் துடிப்பான கலாச்சாரத்தை கொண்டாடுதல்">
+                Celebrating the Rich Traditions and Vibrant Culture of Tamil Heritage
+            </p>
+
+            <div class="event-info">
+                <div class="info-item">
+                    <i class="fas fa-calendar-alt"></i>
+                    <p data-en="Date" data-ta="திகதி">Date</p>
+                    <p class="info-value" data-en="December 15, 2024" data-ta="டிசம்பர் 15, 2024">December 15, 2024</p>
                 </div>
-                <div class="md:w-1/2 flex justify-center">
-                    <div class="relative">
-                        <img src="https://picsum.photos/500/500?random=1" alt="John Doe" class="rounded-full w-64 h-64 md:w-80 md:h-80 object-cover border-4 border-primary shadow-xl">
-                        <div class="absolute -bottom-4 -right-4 bg-accent text-white px-4 py-2 rounded-lg shadow-md">
-                            <span class="font-bold">Available for hire</span>
-                        </div>
-                    </div>
+                <div class="info-item">
+                    <i class="fas fa-clock"></i>
+                    <p data-en="Time" data-ta="நேரம்">Time</p>
+                    <p class="info-value" data-en="9:00 AM - 6:00 PM" data-ta="காலை 9:00 - மாலை 6:00">9:00 AM - 6:00 PM</p>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p data-en="Venue" data-ta="இடம்">Venue</p>
+                    <p class="info-value" data-en="Tamil Cultural Center" data-ta="தமிழ் கலாச்சார மையம்">Tamil Cultural Center</p>
                 </div>
             </div>
+
+            <!-- Countdown Timer -->
+            <div class="countdown-timer" id="countdown">
+                <div class="time-unit">
+                    <div class="time-value" id="days">0</div>
+                    <div class="time-label" data-en="Days" data-ta="நாட்கள்">Days</div>
+                </div>
+                <div class="time-unit">
+                    <div class="time-value" id="hours">0</div>
+                    <div class="time-label" data-en="Hours" data-ta="மணி">Hours</div>
+                </div>
+                <div class="time-unit">
+                    <div class="time-value" id="minutes">0</div>
+                    <div class="time-label" data-en="Minutes" data-ta="நிமிடங்கள்">Minutes</div>
+                </div>
+                <div class="time-unit">
+                    <div class="time-value" id="seconds">0</div>
+                    <div class="time-label" data-en="Seconds" data-ta="விநாடிகள்">Seconds</div>
+                </div>
+            </div>
+
+            <button class="register-btn" onclick="handleRegistration()" data-en="Register Now!" data-ta="இப்போதே பதிவு செய்யுங்கள்!">
+                Register Now <i class="fas fa-arrow-right"></i>
+            </button>
+        </div>
+
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="section py-20 bg-white">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center mb-12">About <span class="text-primary">Me</span></h2>
-            <div class="flex flex-col md:flex-row items-center">
-                <div class="md:w-1/3 mb-8 md:mb-0 flex justify-center">
-                    <img src="https://picsum.photos/400/400?random=2" alt="About me" class="rounded-lg shadow-md w-full max-w-md">
-                </div>
-                <div class="md:w-2/3 md:pl-12">
-                    <p class="text-lg mb-6">
-                        I'm a dedicated Computer Science student with a passion for software development and problem-solving. 
-                        My journey in technology began when I wrote my first line of code in high school, and I've been 
-                        hooked ever since.
-                    </p>
-                    <p class="text-lg mb-6">
-                        I specialize in web development and have experience with various programming languages and frameworks. 
-                        I enjoy tackling complex problems and turning ideas into functional, user-friendly applications.
-                    </p>
-                    <p class="text-lg mb-8">
-                        When I'm not coding, you can find me contributing to open-source projects, participating in hackathons, 
-                        or exploring new technologies to expand my skill set.
-                    </p>
-                    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-                        <div class="bg-gray-100 p-4 rounded-lg">
-                            <h3 class="font-bold text-primary">Name:</h3>
-                            <p>John Doe</p>
-                        </div>
-                        <div class="bg-gray-100 p-4 rounded-lg">
-                            <h3 class="font-bold text-primary">Email:</h3>
-                            <p>john.doe@example.com</p>
-                        </div>
-                        <div class="bg-gray-100 p-4 rounded-lg">
-                            <h3 class="font-bold text-primary">From:</h3>
-                            <p>New York, USA</p>
-                        </div>
-                    </div>
-                </div>
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-en="About the Festival" data-ta="விழா பற்றி">About the Festival</h2>
+                <div class="section-divider"></div>
             </div>
-        </div>
-    </section>
 
-    <!-- Education Section -->
-    <section id="education" class="section py-20 bg-gray-100">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center mb-12">My <span class="text-primary">Education</span></h2>
-            <div class="max-w-3xl mx-auto">
-                <div class="relative">
-                    <!-- Timeline line -->
-                    <div class="absolute left-1/2 w-1 h-full bg-primary transform -translate-x-1/2"></div>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="images/Banner.png" alt="Tamil cultural celebration">
+                </div>
+                <div class="about-text">
+                    <p data-en="The Cultural Heritage Festival 2024 is a grand celebration of Tamil culture, bringing together communities to honor our rich traditions, vibrant arts, and timeless values. This festival showcases the beauty of Tamil literature, classical music, traditional dance, and culinary heritage." data-ta="கலாச்சார பாரம்பரிய விழா 2024 தமிழ் கலாச்சாரத்தின் பெருமைமிக்க கொண்டாட்டமாகும், இது நமது வளமான மரபுகள், துடிப்பான கலைகள் மற்றும் நித்ய மதிப்புகளை மதிக்க சமூகங்களை ஒன்றிணைக்கிறது. இந்த விழா தமிழ் இலக்கியம், சாகித்ய இசை, பாரம்பரிய நாட்டியம் மற்றும் சமையல் பாரம்பரியத்தின் அழகை வெளிப்படுத்துகிறது.">
+                        The Cultural Heritage Festival 2024 is a grand celebration of Tamil culture, bringing together communities to honor our rich traditions, vibrant arts, and timeless values. This festival showcases the beauty of Tamil literature, classical music, traditional dance, and culinary heritage.
+                    </p>
                     
-                    <!-- Timeline items -->
-                    <div class="mb-12 relative">
-                        <div class="flex flex-col md:flex-row items-center">
-                            <div class="md:w-1/2 md:pr-12 md:text-right mb-4 md:mb-0">
-                                <h3 class="text-xl font-bold">Bachelor of Science in Computer Science</h3>
-                                <p class="text-gray-600">University of Technology</p>
-                                <p class="text-gray-500 text-sm">2020 - Present</p>
+                    <h3 data-en="Our Objectives" data-ta="எங்கள் நோக்கங்கள்">Our Objectives</h3>
+                    <div class="objectives">
+                        <div class="objective">
+                            <div class="objective-icon heritage">
+                                <i class="fas fa-heart"></i>
                             </div>
-                            <div class="hidden md:block w-8 h-8 rounded-full bg-primary absolute left-1/2 transform -translate-x-1/2"></div>
-                            <div class="md:w-1/2 md:pl-12">
-                                <div class="bg-white p-6 rounded-lg shadow-md">
-                                    <p>
-                                        Currently pursuing my degree with a focus on software engineering and data structures. 
-                                        Relevant coursework includes Algorithms, Database Systems, Web Development, and 
-                                        Artificial Intelligence.
-                                    </p>
-                                </div>
+                            <div class="objective-content">
+                                <h4 data-en="Preserve Cultural Heritage" data-ta="கலாச்சார பாரம்பரியத்தை பாதுகாத்தல்">Preserve Cultural Heritage</h4>
+                                <p data-en="Safeguarding and promoting Tamil traditions for future generations through immersive cultural experiences." data-ta="அடுத்த தலைமுறையினருக்கு தமிழ் மரபுகளை பாதுகாத்து ஊக்குவித்தல் மூலம் கலாச்சார அனுபவங்களை வழங்குதல்.">Safeguarding and promoting Tamil traditions for future generations through immersive cultural experiences.</p>
                             </div>
                         </div>
-                    </div>
-                    
-                    <div class="mb-12 relative">
-                        <div class="flex flex-col md:flex-row items-center">
-                            <div class="md:w-1/2 md:pr-12 md:text-right mb-4 md:mb-0">
-                                <h3 class="text-xl font-bold">High School Diploma</h3>
-                                <p class="text-gray-600">Tech High School</p>
-                                <p class="text-gray-500 text-sm">2016 - 2020</p>
+                        <div class="objective">
+                            <div class="objective-icon community">
+                                <i class="fas fa-users"></i>
                             </div>
-                            <div class="hidden md:block w-8 h-8 rounded-full bg-primary absolute left-1/2 transform -translate-x-1/2"></div>
-                            <div class="md:w-1/2 md:pl-12">
-                                <div class="bg-white p-6 rounded-lg shadow-md">
-                                    <p>
-                                        Graduated with honors. Participated in computer science clubs and competitions. 
-                                        Developed my first web applications during this time.
-                                    </p>
-                                </div>
+                            <div class="objective-content">
+                                <h4 data-en="Build Community Connections" data-ta="சமூக தொடர்புகளை உருவாக்குதல்">Build Community Connections</h4>
+                                <p data-en="Fostering unity and strengthening bonds within the Tamil community and beyond." data-ta="தமிழ் சமூகத்திற்குள் மற்றும் அதற்கு அப்பால் ஒற்றுமையை வளர்த்து உறவுகளை வலுப்படுத்துதல்.">Fostering unity and strengthening bonds within the Tamil community and beyond.</p>
                             </div>
                         </div>
-                    </div>
-                    
-                    <div class="relative">
-                        <div class="flex flex-col md:flex-row items-center">
-                            <div class="md:w-1/2 md:pr-12 md:text-right mb-4 md:mb-0">
-                                <h3 class="text-xl font-bold">Online Certifications</h3>
-                                <p class="text-gray-600">Various Platforms</p>
-                                <p class="text-gray-500 text-sm">2018 - Present</p>
+                        <div class="objective">
+                            <div class="objective-icon arts">
+                                <i class="fas fa-star"></i>
                             </div>
-                            <div class="hidden md:block w-8 h-8 rounded-full bg-primary absolute left-1/2 transform -translate-x-1/2"></div>
-                            <div class="md:w-1/2 md:pl-12">
-                                <div class="bg-white p-6 rounded-lg shadow-md">
-                                    <ul class="list-disc pl-5">
-                                        <li>Full Stack Web Development - Coursera</li>
-                                        <li>Data Structures and Algorithms - Udemy</li>
-                                        <li>Machine Learning Fundamentals - edX</li>
-                                    </ul>
-                                </div>
+                            <div class="objective-content">
+                                <h4 data-en="Celebrate Artistic Excellence" data-ta="கலை சிறப்பை கொண்டாடுதல்">Celebrate Artistic Excellence</h4>
+                                <p data-en="Showcasing the finest Tamil arts, from classical Bharatanatyam to contemporary expressions." data-ta="பாரம்பரிய பரதநாட்டியம் முதல் சமகால வெளிப்பாடுகள் வரை சிறந்த தமிழ் கலைகளை வெளிப்படுத்துதல்.">Showcasing the finest Tamil arts, from classical Bharatanatyam to contemporary expressions.</p>
                             </div>
                         </div>
                     </div>
@@ -216,294 +156,352 @@
         </div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="section py-20 bg-white">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center mb-12">My <span class="text-primary">Skills</span></h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                <!-- Technical Skills -->
-                <div>
-                    <h3 class="text-xl font-bold mb-6 text-center md:text-left">Technical Skills</h3>
-                    <div class="space-y-6">
-                        <div>
-                            <div class="flex justify-between mb-1">
-                                <span>HTML/CSS</span>
-                                <span>90%</span>
-                            </div>
-                            <div class="w-full bg-gray-200 rounded-full h-2.5">
-                                <div class="skill-bar bg-primary h-2.5 rounded-full" style="width: 90%"></div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="flex justify-between mb-1">
-                                <span>JavaScript</span>
-                                <span>85%</span>
-                            </div>
-                            <div class="w-full bg-gray-200 rounded-full h-2.5">
-                                <div class="skill-bar bg-primary h-2.5 rounded-full" style="width: 85%"></div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="flex justify-between mb-1">
-                                <span>Python</span>
-                                <span>80%</span>
-                            </div>
-                            <div class="w-full bg-gray-200 rounded-full h-2.5">
-                                <div class="skill-bar bg-primary h-2.5 rounded-full" style="width: 80%"></div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="flex justify-between mb-1">
-                                <span>Java</span>
-                                <span>75%</span>
-                            </div>
-                            <div class="w-full bg-gray-200 rounded-full h-2.5">
-                                <div class="skill-bar bg-primary h-2.5 rounded-full" style="width: 75%"></div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="flex justify-between mb-1">
-                                <span>SQL</span>
-                                <span>70%</span>
-                            </div>
-                            <div class="w-full bg-gray-200 rounded-full h-2.5">
-                                <div class="skill-bar bg-primary h-2.5 rounded-full" style="width: 70%"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Professional Skills -->
-                <div>
-                    <h3 class="text-xl font-bold mb-6 text-center md:text-left">Professional Skills</h3>
-                    <div class="space-y-6">
-                        <div>
-                            <div class="flex justify-between mb-1">
-                                <span>Problem Solving</span>
-                                <span>95%</span>
-                            </div>
-                            <div class="w-full bg-gray-200 rounded-full h-2.5">
-                                <div class="skill-bar bg-accent h-2.5 rounded-full" style="width: 95%"></div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="flex justify-between mb-1">
-                                <span>Teamwork</span>
-                                <span>90%</span>
-                            </div>
-                            <div class="w-full bg-gray-200 rounded-full h-2.5">
-                                <div class="skill-bar bg-accent h-2.5 rounded-full" style="width: 90%"></div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="flex justify-between mb-1">
-                                <span>Communication</span>
-                                <span>85%</span>
-                            </div>
-                            <div class="w-full bg-gray-200 rounded-full h-2.5">
-                                <div class="skill-bar bg-accent h-2.5 rounded-full" style="width: 85%"></div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="flex justify-between mb-1">
-                                <span>Time Management</span>
-                                <span>80%</span>
-                            </div>
-                            <div class="w-full bg-gray-200 rounded-full h-2.5">
-                                <div class="skill-bar bg-accent h-2.5 rounded-full" style="width: 80%"></div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="flex justify-between mb-1">
-                                <span>Leadership</span>
-                                <span>75%</span>
-                            </div>
-                            <div class="w-full bg-gray-200 rounded-full h-2.5">
-                                <div class="skill-bar bg-accent h-2.5 rounded-full" style="width: 75%"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <!-- Schedule Section -->
+    <section id="schedule" class="schedule">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-en="Festival Schedule" data-ta="நிகழ்ச்சி நிரல்">Agenda</h2>
+                <div class="section-divider"></div>
+                <p data-en="A full day of cultural immersion featuring performances, workshops, and community celebrations" data-ta="நிகழ்ச்சிகள், பட்டறைகள் மற்றும் சமூக கொண்டாட்டங்களுடன் கூடிய முழு நாள் கலாச்சார அனுபவம்">A full day of cultural immersion featuring performances, workshops, and community celebrations</p>
             </div>
-            
-            <!-- Tools & Technologies -->
-            <div class="mt-16 max-w-4xl mx-auto">
-                <h3 class="text-xl font-bold mb-6 text-center">Tools & Technologies</h3>
-                <div class="flex flex-wrap justify-center gap-4">
-                    <div class="bg-gray-100 px-4 py-2 rounded-full flex items-center">
-                        <i class="fab fa-git-alt text-gray-700 mr-2"></i>
-                        <span>Git</span>
+
+            <div class="schedule-timeline">
+                <div class="timeline-line"></div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-icon music">
+                        <i class="fas fa-music"></i>
                     </div>
-                    <div class="bg-gray-100 px-4 py-2 rounded-full flex items-center">
-                        <i class="fab fa-github text-gray-700 mr-2"></i>
-                        <span>GitHub</span>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3 data-en="Opening Ceremony & Classical Music" data-ta="தொடக்க விழா மற்றும் சாகித்ய இசை">Opening Ceremony & Classical Music</h3>
+                            <span class="timeline-time" data-en="9:00 AM - 10:30 AM" data-ta="காலை 9:00 - 10:30">9:00 AM - 10:30 AM</span>
+                        </div>
+                        <p data-en="Traditional Tamil welcome songs and inaugural address by distinguished guests." data-ta="பாரம்பரிய தமிழ் வரவேற்பு பாடல்கள் மற்றும் மதிப்பிற்குரிய விருந்தினர்களின் தொடக்க உரை.">Traditional Tamil welcome songs and inaugural address by distinguished guests.</p>
+                        <p class="timeline-location" data-en="Main Auditorium" data-ta="பிரதான அரங்கம்">Main Auditorium</p>
                     </div>
-                    <div class="bg-gray-100 px-4 py-2 rounded-full flex items-center">
-                        <i class="fab fa-react text-gray-700 mr-2"></i>
-                        <span>React</span>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-icon workshop">
+                        <i class="fas fa-hands"></i>
                     </div>
-                    <div class="bg-gray-100 px-4 py-2 rounded-full flex items-center">
-                        <i class="fab fa-node-js text-gray-700 mr-2"></i>
-                        <span>Node.js</span>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3 data-en="Traditional Arts Workshop" data-ta="பாரம்பரிய கலை பட்டறை">Traditional Arts Workshop</h3>
+                            <span class="timeline-time" data-en="11:00 AM - 12:30 PM" data-ta="காலை 11:00 - 12:30">11:00 AM - 12:30 PM</span>
+                        </div>
+                        <p data-en="Hands-on workshops in pottery, weaving, and traditional crafts." data-ta="மண்பாண்டம், நெசவு மற்றும் பாரம்பரிய கைவினைகளில் நேரடி பட்டறைகள்.">Hands-on workshops in pottery, weaving, and traditional crafts.</p>
+                        <p class="timeline-location" data-en="Workshop Hall A & B" data-ta="பட்டறை அரங்கம் A & B">Workshop Hall A & B</p>
                     </div>
-                    <div class="bg-gray-100 px-4 py-2 rounded-full flex items-center">
-                        <i class="fas fa-database text-gray-700 mr-2"></i>
-                        <span>MySQL</span>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-icon food">
+                        <i class="fas fa-utensils"></i>
                     </div>
-                    <div class="bg-gray-100 px-4 py-2 rounded-full flex items-center">
-                        <i class="fab fa-aws text-gray-700 mr-2"></i>
-                        <span>AWS</span>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3 data-en="Traditional Lunch & Food Festival" data-ta="பாரம்பரிய மதிய உணவு மற்றும் உணவு விழா">Traditional Lunch & Food Festival</h3>
+                            <span class="timeline-time" data-en="12:30 PM - 2:00 PM" data-ta="மதியம் 12:30 - 2:00">12:30 PM - 2:00 PM</span>
+                        </div>
+                        <p data-en="Authentic Tamil cuisine prepared by community elders and master chefs." data-ta="சமூக மூத்தவர்கள் மற்றும் தலைசிறந்த சமையற்காரர்களால் தயாரிக்கப்பட்ட உண்மையான தமிழ் உணவுகள்.">Authentic Tamil cuisine prepared by community elders and master chefs.</p>
+                        <p class="timeline-location" data-en="Community Dining Hall" data-ta="சமூக உணவு அரங்கம்">Community Dining Hall</p>
                     </div>
-                    <div class="bg-gray-100 px-4 py-2 rounded-full flex items-center">
-                        <i class="fab fa-docker text-gray-700 mr-2"></i>
-                        <span>Docker</span>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-icon dance">
+                        <i class="fas fa-theater-masks"></i>
                     </div>
-                    <div class="bg-gray-100 px-4 py-2 rounded-full flex items-center">
-                        <i class="fab fa-linux text-gray-700 mr-2"></i>
-                        <span>Linux</span>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3 data-en="Bharatanatyam Performances" data-ta="பரதநாட்டிய நிகழ்ச்சிகள்">Bharatanatyam Performances</h3>
+                            <span class="timeline-time" data-en="2:30 PM - 4:00 PM" data-ta="மதியம் 2:30 - 4:00">2:30 PM - 4:00 PM</span>
+                        </div>
+                        <p data-en="Classical dance performances by renowned artists and young talents." data-ta="புகழ்பெற்ற கலைஞர்கள் மற்றும் இளம் திறமையாளர்களின் சாகித்ய நாட்டிய நிகழ்ச்சிகள்.">Classical dance performances by renowned artists and young talents.</p>
+                        <p class="timeline-location" data-en="Main Stage" data-ta="பிரதான மேடை">Main Stage</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-icon literature">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3 data-en="Tamil Literature Discussion" data-ta="தமிழ் இலக்கிய விவாதம்">Tamil Literature Discussion</h3>
+                            <span class="timeline-time" data-en="4:30 PM - 5:30 PM" data-ta="மாலை 4:30 - 5:30">4:30 PM - 5:30 PM</span>
+                        </div>
+                        <p data-en="Panel discussion on ancient Tamil texts and contemporary literature." data-ta="பழமையான தமிழ் நூல்கள் மற்றும் சமகால இலக்கியம் பற்றிய குழு விவாதம்.">Panel discussion on ancient Tamil texts and contemporary literature.</p>
+                        <p class="timeline-location" data-en="Conference Room" data-ta="மாநாட்டு அரங்கம்">Conference Room</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-icon closing">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3 data-en="Closing Ceremony & Awards" data-ta="நிறைவு விழா மற்றும் விருதுகள்">Closing Ceremony & Awards</h3>
+                            <span class="timeline-time" data-en="5:30 PM - 6:00 PM" data-ta="மாலை 5:30 - 6:00">5:30 PM - 6:00 PM</span>
+                        </div>
+                        <p data-en="Recognition of community contributions and closing cultural program." data-ta="சமூக பங்களிப்புகளின் அங்கீகாரம் மற்றும் நிறைவு கலாச்சார நிகழ்ச்சி.">Recognition of community contributions and closing cultural program.</p>
+                        <p class="timeline-location" data-en="Main Auditorium" data-ta="பிரதான அரங்கம்">Main Auditorium</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="section py-20 bg-gray-100">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center mb-12">My <span class="text-primary">Projects</span></h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Project 1 -->
-                <div class="project-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
-                    <img src="https://picsum.photos/600/400?random=3" alt="E-commerce Platform" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">E-commerce Platform</h3>
-                        <p class="text-gray-600 mb-4">
-                            A full-stack e-commerce application with user authentication, product catalog, and payment processing.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-primary bg-opacity-10 text-primary px-3 py-1 rounded-full text-sm">React</span>
-                            <span class="bg-primary bg-opacity-10 text-primary px-3 py-1 rounded-full text-sm">Node.js</span>
-                            <span class="bg-primary bg-opacity-10 text-primary px-3 py-1 rounded-full text-sm">MongoDB</span>
-                        </div>
-                        <div class="flex space-x-3">
-                            <a href="#" class="text-primary hover:underline">View Demo</a>
-                            <a href="#" class="text-primary hover:underline">Source Code</a>
+    <!-- Speakers Section -->
+    <section id="speakers" class="speakers">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-en="Featured Speakers" data-ta="சிறப்பு பேச்சாளர்கள்">Featured Speakers</h2>
+                <div class="section-divider"></div>
+                <p data-en="Distinguished guests and cultural experts who will share their wisdom and insights" data-ta="தங்கள் ஞானத்தையும் நுண்ணறிவையும் பகிர்ந்து கொள்ளும் மதிப்பிற்குரிய விருந்தினர்கள் மற்றும் கலாச்சார நிபுணர்கள்">Distinguished guests and cultural experts who will share their wisdom and insights</p>
+            </div>
+
+            <div class="speakers-grid">
+                <div class="speaker-card">
+                    <div class="speaker-image">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=400" alt="Dr. Rajesh Kumar">
+                        <div class="speaker-icon heritage">
+                            <i class="fas fa-quote-left"></i>
                         </div>
                     </div>
+                    <h3 data-en="Dr. Rajesh Kumar" data-ta="டாக்டர் ராஜேஷ் குமார்">Dr. Rajesh Kumar</h3>
+                    <p class="speaker-designation" data-en="Cultural Historian & Author" data-ta="கலாச்சார வரலாற்றாசிரியர் மற்றும் எழுத்தாளர்">Cultural Historian & Author</p>
+                    <p class="speaker-bio" data-en="Renowned expert in Tamil heritage with over 30 years of research in ancient traditions and cultural preservation. Author of 15 books on Tamil history." data-ta="பழமையான மரபுகள் மற்றும் கலாச்சார பாதுகாப்பில் 30 ஆண்டுகளுக்கும் மேலான ஆராய்ச்சியுடன் தமிழ் பாரம்பரியத்தில் புகழ்பெற்ற நிபுணர். தமிழ் வரலாற்றில் 15 புத்தகங்களின் எழுத்தாளர்.">Renowned expert in Tamil heritage with over 30 years of research in ancient traditions and cultural preservation. Author of 15 books on Tamil history.</p>
                 </div>
-                
-                <!-- Project 2 -->
-                <div class="project-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
-                    <img src="https://picsum.photos/600/400?random=4" alt="Task Management App" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">Task Management App</h3>
-                        <p class="text-gray-600 mb-4">
-                            A productivity application for organizing tasks with drag-and-drop functionality and team collaboration.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-primary bg-opacity-10 text-primary px-3 py-1 rounded-full text-sm">Vue.js</span>
-                            <span class="bg-primary bg-opacity-10 text-primary px-3 py-1 rounded-full text-sm">Firebase</span>
-                            <span class="bg-primary bg-opacity-10 text-primary px-3 py-1 rounded-full text-sm">Tailwind CSS</span>
-                        </div>
-                        <div class="flex space-x-3">
-                            <a href="#" class="text-primary hover:underline">View Demo</a>
-                            <a href="#" class="text-primary hover:underline">Source Code</a>
+
+                <div class="speaker-card">
+                    <div class="speaker-image">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=400" alt="Priya Bharathi">
+                        <div class="speaker-icon community">
+                            <i class="fas fa-theater-masks"></i>
                         </div>
                     </div>
+                    <h3 data-en="Priya Bharathi" data-ta="பிரியா பாரதி">Priya Bharathi</h3>
+                    <p class="speaker-designation" data-en="Master Bharatanatyam Dancer" data-ta="தலைசிறந்த பரதநாட்டிய கலைஞர்">Master Bharatanatyam Dancer</p>
+                    <p class="speaker-bio" data-en="International acclaimed classical dancer who has performed in over 40 countries. Founder of the Bharathi Dance Academy and cultural ambassador." data-ta="40க்கும் மேற்பட்ட நாடுகளில் நிகழ்ச்சி நடத்திய சர்வதேச அளவில் பாராட்டப்பட்ட சாகித்ய நடனக் கலைஞர். பாரதி நடன அகாடமியின் நிறுவனர் மற்றும் கலாச்சார தூதர்.">International acclaimed classical dancer who has performed in over 40 countries. Founder of the Bharathi Dance Academy and cultural ambassador.</p>
                 </div>
-                
-                <!-- Project 3 -->
-                <div class="project-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
-                    <img src="https://picsum.photos/600/400?random=5" alt="Machine Learning Model" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">Sentiment Analysis Tool</h3>
-                        <p class="text-gray-600 mb-4">
-                            A machine learning model that analyzes text sentiment with 85% accuracy using natural language processing.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-primary bg-opacity-10 text-primary px-3 py-1 rounded-full text-sm">Python</span>
-                            <span class="bg-primary bg-opacity-10 text-primary px-3 py-1 rounded-full text-sm">TensorFlow</span>
-                            <span class="bg-primary bg-opacity-10 text-primary px-3 py-1 rounded-full text-sm">NLTK</span>
-                        </div>
-                        <div class="flex space-x-3">
-                            <a href="#" class="text-primary hover:underline">View Demo</a>
-                            <a href="#" class="text-primary hover:underline">Source Code</a>
+
+                <div class="speaker-card">
+                    <div class="speaker-image">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=400" alt="Prof. A. Subramaniam">
+                        <div class="speaker-icon arts">
+                            <i class="fas fa-book"></i>
                         </div>
                     </div>
+                    <h3 data-en="Prof. A. Subramaniam" data-ta="பேராசிரியர் ஏ. சுப்ரமணியம்">Prof. A. Subramaniam</h3>
+                    <p class="speaker-designation" data-en="Tamil Literature Scholar" data-ta="தமிழ் இலக்கிய அறிஞர்">Tamil Literature Scholar</p>
+                    <p class="speaker-bio" data-en="Professor Emeritus specializing in ancient Tamil texts and Sangam literature. Winner of the Sahitya Akademi Award for Tamil literary contributions." data-ta="பழமையான தமிழ் நூல்கள் மற்றும் சங்க இலக்கியத்தில் நிபுணத்துவம் பெற்ற ஓய்வுபெற்ற பேராசிரியர். தமிழ் இலக்கிய பங்களிப்புகளுக்காக சாகித்ய அகாடமி விருது வென்றவர்.">Professor Emeritus specializing in ancient Tamil texts and Sangam literature. Winner of the Sahitya Akademi Award for Tamil literary contributions.</p>
                 </div>
-                
-                <!-- Project 4 -->
-                <div class="project-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
-                    <img src="https://picsum.photos/600/400?random=6" alt="Portfolio Website" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">Portfolio Website</h3>
-                        <p class="text-gray-600 mb-4">
-                            A responsive portfolio website built with modern web technologies to showcase projects and skills.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-primary bg-opacity-10 text-primary px-3 py-1 rounded-full text-sm">HTML5</span>
-                            <span class="bg-primary bg-opacity-10 text-primary px-3 py-1 rounded-full text-sm">CSS3</span>
-                            <span class="bg-primary bg-opacity-10 text-primary px-3 py-1 rounded-full text-sm">JavaScript</span>
-                        </div>
-                        <div class="flex space-x-3">
-                            <a href="#" class="text-primary hover:underline">View Demo</a>
-                            <a href="#" class="text-primary hover:underline">Source Code</a>
+
+                <div class="speaker-card">
+                    <div class="speaker-image">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=400" alt="Arun Krishnan">
+                        <div class="speaker-icon heritage">
+                            <i class="fas fa-music"></i>
                         </div>
                     </div>
+                    <h3 data-en="Arun Krishnan" data-ta="அருண் கிருஷ்ணன்">Arun Krishnan</h3>
+                    <p class="speaker-designation" data-en="Carnatic Music Virtuoso" data-ta="கர்நாடக இசை மேதை">Carnatic Music Virtuoso</p>
+                    <p class="speaker-bio" data-en="Legendary veena player and vocalist who has preserved traditional Carnatic music for four decades. Mentored over 200 musicians worldwide." data-ta="நான்கு தசாப்தங்களாக பாரம்பரிய கர்நாடக இசையை பாதுகாத்த புகழ்பெற்ற வீணை வாசகர் மற்றும் பாடகர். உலகம் முழுவதும் 200க்கும் மேற்பட்ட இசைக்கலைஞர்களுக்கு வழிகாட்டியுள்ளார்.">Legendary veena player and vocalist who has preserved traditional Carnatic music for four decades. Mentored over 200 musicians worldwide.</p>
                 </div>
-                
-                <!-- Project 5 -->
-                <div class="project-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
-                    <img src="https://picsum.photos/600/400?random=7" alt="Weather App" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">Weather Application</h3>
-                        <p class="text-gray-600 mb-4">
-                            A weather forecasting application that provides real-time weather data using API integration.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-primary bg-opacity-10 text-primary px-3 py-1 rounded-full text-sm">JavaScript</span>
-                            <span class="bg-primary bg-opacity-10 text-primary px-3 py-1 rounded-full text-sm">API</span>
-                            <span class="bg-primary bg-opacity-10 text-primary px-3 py-1 rounded-full text-sm">Bootstrap</span>
-                        </div>
-                        <div class="flex space-x-3">
-                            <a href="#" class="text-primary hover:underline">View Demo</a>
-                            <a href="#" class="text-primary hover:underline">Source Code</a>
+
+                <div class="speaker-card">
+                    <div class="speaker-image">
+                        <img src="https://images.unsplash.com/photo-1494790108755-2616b332ef04?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=400" alt="Chef Meera Raman">
+                        <div class="speaker-icon community">
+                            <i class="fas fa-utensils"></i>
                         </div>
                     </div>
+                    <h3 data-en="Chef Meera Raman" data-ta="சமையற்காரர் மீரா ராமன்">Chef Meera Raman</h3>
+                    <p class="speaker-designation" data-en="Traditional Cuisine Expert" data-ta="பாரம்பரிய சமையல் நிபுணர்">Traditional Cuisine Expert</p>
+                    <p class="speaker-bio" data-en="Master chef specializing in authentic Tamil cuisine. Author of 'Flavors of Tamil Nadu' cookbook and UNESCO Cultural Heritage Ambassador." data-ta="உண்மையான தமிழ் சமையலில் நிபுணத்துவம் பெற்ற தலைசிறந்த சமையற்காரர். 'தமிழ்நாட்டின் சுவைகள்' சமையல் புத்தகத்தின் எழுத்தாளர் மற்றும் யுனெஸ்கோ கலாச்சார பாரம்பரிய தூதர்.">Master chef specializing in authentic Tamil cuisine. Author of "Flavors of Tamil Nadu" cookbook and UNESCO Cultural Heritage Ambassador.</p>
                 </div>
-                
-                <!-- Project 6 -->
-                <div class="project-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
-                    <img src="https://picsum.photos/600/400?random=8" alt="Chat Application" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">Real-time Chat App</h3>
-                        <p class="text-gray-600 mb-4">
-                            A chat application with real-time messaging functionality using WebSockets and user authentication.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-primary bg-opacity-10 text-primary px-3 py-1 rounded-full text-sm">Socket.io</span>
-                            <span class="bg-primary bg-opacity-10 text-primary px-3 py-1 rounded-full text-sm">Express</span>
-                            <span class="bg-primary bg-opacity-10 text-primary px-3 py-1 rounded-full text-sm">MongoDB</span>
-                        </div>
-                        <div class="flex space-x-3">
-                            <a href="#" class="text-primary hover:underline">View Demo</a>
-                            <a href="#" class="text-primary hover:underline">Source Code</a>
+
+                <div class="speaker-card">
+                    <div class="speaker-image">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=400" alt="Vikram Patel">
+                        <div class="speaker-icon arts">
+                            <i class="fas fa-globe"></i>
                         </div>
                     </div>
+                    <h3 data-en="Vikram Patel" data-ta="விக்ரம் பட்டேல்">Vikram Patel</h3>
+                    <p class="speaker-designation" data-en="Cultural Activist & Community Leader" data-ta="கலாச்சார ஆர்வலர் மற்றும் சமூக தலைவர்">Cultural Activist & Community Leader</p>
+                    <p class="speaker-bio" data-en="Young leader dedicated to preserving Tamil culture among diaspora communities. Founder of Global Tamil Youth Network with presence in 25 countries." data-ta="புலம்பெயர் சமூகங்களிடையே தமிழ் கலாச்சாரத்தை பாதுகாப்பதற்கு அர்பணிப்புடன் செயல்படும் இளம் தலைவர். 25 நாடுகளில் இருப்புடன் கூடிய உலகளாவிய தமிழ் இளையோர் வலையமைப்பின் நிறுவனர்.">Young leader dedicated to preserving Tamil culture among diaspora communities. Founder of Global Tamil Youth Network with presence in 25 countries.</p>
                 </div>
             </div>
-            
-            <div class="text-center mt-12">
-                <a href="#" class="inline-block bg-primary hover:bg-secondary text-white px-6 py-3 rounded-lg font-medium transition">
-                    View All Projects
-                </a>
+        </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section id="partners" class="partners">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-en="Our Partners" data-ta="எங்கள் கூட்டாளர்கள்">Our Partners</h2>
+                <div class="section-divider"></div>
+                <p data-en="Proud to collaborate with organizations that share our vision of cultural preservation" data-ta="கலாச்சார பாதுகாப்பு என்ற எங்கள் பார்வையை பகிர்ந்து கொள்ளும் அமைப்புகளுடன் ஒத்துழைப்பதில் பெருமை">Proud to collaborate with organizations that share our vision of cultural preservation</p>
+            </div>
+
+            <div class="partners-grid">
+                <div class="partner-card">
+                    <img src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=200&h=200" alt="Tamil Heritage Foundation">
+                    <h3 data-en="Tamil Heritage Foundation" data-ta="தமிழ் பாரம்பரிய அறக்கட்டளை">Tamil Heritage Foundation</h3>
+                    <p data-en="Leading organization dedicated to preserving and promoting Tamil cultural heritage through educational programs and community initiatives." data-ta="கல்வி திட்டங்கள் மற்றும் சமூக முன்முயற்சிகள் மூலம் தமிழ் கலாச்சார பாரம்பரியத்தை பாதுகாத்து ஊக்குவிப்பதற்கு அர்பணிப்புடன் செயல்படும் முன்னணி அமைப்பு.">Leading organization dedicated to preserving and promoting Tamil cultural heritage through educational programs and community initiatives.</p>
+                </div>
+
+                <div class="partner-card">
+                    <img src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=200&h=200" alt="Classical Arts Academy">
+                    <h3 data-en="Classical Arts Academy" data-ta="சாகித்ய கலை அகாடமி">Classical Arts Academy</h3>
+                    <p data-en="Premier institution for traditional Indian classical arts, offering comprehensive training in dance, music, and theatrical arts to students of all ages." data-ta="அனைத்து வயதினருக்கும் நடனம், இசை மற்றும் நாடக கலைகளில் விரிவான பயிற்சி அளிக்கும் பாரம்பரிய இந்திய சாகித்ய கலைகளுக்கான முன்னணி நிறுவனம்.">Premier institution for traditional Indian classical arts, offering comprehensive training in dance, music, and theatrical arts to students of all ages.</p>
+                </div>
+
+                <div class="partner-card">
+                    <img src="https://images.unsplash.com/photo-1606857521015-7f9fcf423740?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=200&h=200" alt="Global Tamil Community">
+                    <h3 data-en="Global Tamil Community" data-ta="உலகளாவிய தமிழ் சமூகம்">Global Tamil Community</h3>
+                    <p data-en="International network connecting Tamil communities worldwide, fostering cultural exchange and supporting diaspora families in preserving their roots." data-ta="உலகம் முழுவதும் உள்ள தமிழ் சமூகங்களை இணைக்கும் சர்வதேச வலையமைப்பு, கலாச்சார பரிமாற்றத்தை வளர்த்து புலம்பெயர் குடும்பங்கள் தங்கள் வேர்களை பாதுகாக்க ஆதரவு அளிக்கிறது.">International network connecting Tamil communities worldwide, fostering cultural exchange and supporting diaspora families in preserving their roots.</p>
+                </div>
+
+                <div class="partner-card">
+                    <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=200&h=200" alt="Heritage Research Institute">
+                    <h3 data-en="Heritage Research Institute" data-ta="பாரம்பரிய ஆராய்ச்சி நிறுவனம்">Heritage Research Institute</h3>
+                    <p data-en="Academic institution focused on research and documentation of South Asian cultural heritage, publishing scholarly works and organizing symposiums." data-ta="தென்னாசிய கலாச்சார பாரம்பரியத்தின் ஆராய்ச்சி மற்றும் ஆவணப்படுத்தலில் கவனம் செலுத்தும் கல்வி நிறுவனம், அறிவார்ந்த படைப்புகளை வெளியிட்டு கருத்தரங்குகளை ஏற்பாடு செய்கிறது.">Academic institution focused on research and documentation of South Asian cultural heritage, publishing scholarly works and organizing symposiums.</p>
+                </div>
+            </div>
+
+            <div class="sponsors-section">
+                <h3 data-en="Special Thanks to Our Sponsors" data-ta="எங்கள் ஆதரவாளர்களுக்கு சிறப்பு நன்றி">Special Thanks to Our Sponsors</h3>
+                <div class="sponsors-logos">
+                    <!-- Placeholder for sponsor logos that can be added later -->
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="section py-20 bg-white">
-        <div class="container mx-auto px-6">
-            <h2 class="text-
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-en="Get In Touch" data-ta="தொடர்பில் இருங்கள்">Get In Touch</h2>
+                <div class="section-divider"></div>
+                <p data-en="Have questions about the festival? We're here to help you with information and registration" data-ta="விழா பற்றி கேள்விகள் உள்ளதா? தகவல் மற்றும் பதிவுக்கு நாங்கள் உங்களுக்கு உதவ இங்கே இருக்கிறோம்">Have questions about the festival? We're here to help you with information and registration</p>
+            </div>
+
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3 data-en="Event Information" data-ta="நிகழ்வு தகவல்">Event Information</h3>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4 data-en="Address" data-ta="முகவரி">Address</h4>
+                            <p data-en="Tamil Cultural Center, 123 Heritage Avenue, Cultural District, CA 90210" data-ta="தமிழ் கலாச்சார மையம், 123 பாரம்பரிய அவென்யூ, கலாச்சார மாவட்டம், CA 90210">Tamil Cultural Center<br>123 Heritage Avenue<br>Cultural District, CA 90210</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4 data-en="Phone" data-ta="தொலைபேசி">Phone</h4>
+                            <p>+1 (555) 123-4567</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4 data-en="Email" data-ta="மின்னஞ்சல்">Email</h4>
+                            <p>info@culturalheritagefest.org</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4 data-en="Event Hours" data-ta="நிகழ்வு நேரம்">Event Hours</h4>
+                            <p data-en="9:00 AM - 6:00 PM, December 15, 2024" data-ta="காலை 9:00 - மாலை 6:00, டிசம்பர் 15, 2024">9:00 AM - 6:00 PM<br>December 15, 2024</p>
+                        </div>
+                    </div>
+
+                    <div class="social-media">
+                        <h4 data-en="Follow Us" data-ta="எங்களை பின்தொடருங்கள்">Follow Us</h4>
+                        <div class="social-links">
+                            <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-map">
+                    <h3 data-en="Find Us" data-ta="எங்களை கண்டுபிடியுங்கள்">Find Us</h3>
+                    <div class="map-placeholder">
+                        <i class="fas fa-map-marked-alt"></i>
+                        <p data-en="Interactive map will be available here" data-ta="ஊடாடும் வரைபடம் இங்கே கிடைக்கும்">Interactive map will be available here</p>
+                        <small data-en="Tamil Cultural Center, Cultural District" data-ta="தமிழ் கலாச்சார மையம், கலாச்சார மாவட்டம்">Tamil Cultural Center, Cultural District</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <i class="fas fa-om"></i>
+                        <span data-en="Cultural Heritage Festival" data-ta="கலாச்சார பாரம்பரிய விழா">Cultural Heritage Festival</span>
+                    </div>
+                    <p data-en="Celebrating Tamil culture and heritage through community, tradition, and artistic excellence. Join us in preserving our rich cultural legacy for future generations." data-ta="சமூகம், மரபு மற்றும் கலை சிறப்பு மூலம் தமிழ் கலாச்சாரம் மற்றும் பாரம்பரியத்தை கொண்டாடுகிறோம். அடுத்த தலைமுறையினருக்கு நமது வளமான கலாச்சார மரபை பாதுகாப்பதில் எங்களுடன் இணையுங்கள்.">Celebrating Tamil culture and heritage through community, tradition, and artistic excellence. Join us in preserving our rich cultural legacy for future generations.</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4 data-en="Quick Links" data-ta="விரைவு இணைப்புகள்">Quick Links</h4>
+                    <ul>
+                        <li><a href="#home" data-en="Home" data-ta="முகப்பு">Home</a></li>
+                        <li><a href="#about" data-en="About" data-ta="அறிமுகம்">About</a></li>
+                        <li><a href="#schedule" data-en="Schedule" data-ta="அட்டவணை">Schedule</a></li>
+                        <li><a href="#speakers" data-en="Speakers" data-ta="பேச்சாளர்கள்">Speakers</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4 data-en="Resources" data-ta="ஆதாரங்கள்">Resources</h4>
+                    <ul>
+                        <li><a href="#partners" data-en="Partners" data-ta="கூட்டாளர்கள்">Partners</a></li>
+                        <li><a href="#contact" data-en="Contact" data-ta="தொடர்பு">Contact</a></li>
+                        <li><a href="#" data-en="Event Guidelines" data-ta="நிகழ்வு வழிகாட்டுதல்கள்">Event Guidelines</a></li>
+                        <li><a href="#" data-en="Press Kit" data-ta="செய்தியாளர் தொகுப்பு">Press Kit</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4 data-en="Connect With Us" data-ta="எங்களுடன் இணையுங்கள்">Connect With Us</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p data-en="© 2024 Cultural Heritage Festival. All rights reserved. Made with ❤️ for the Tamil community." data-ta="© 2024 கலாச்சார பாரம்பரிய விழா. அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை. தமிழ் சமூகத்திற்காக ❤️ உடன் உருவாக்கப்பட்டது.">© 2024 Cultural Heritage Festival. All rights reserved. Made with ❤️ for the Tamil community.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
