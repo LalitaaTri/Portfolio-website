@@ -421,7 +421,7 @@ section {
 
 .timeline-line {
     position: absolute;
-    left: 60px;
+    left: 40px;
     top: 0;
     bottom: 0;
     width: 3px;
@@ -464,7 +464,7 @@ section {
     transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.timeline-icon.music {
+/* .timeline-icon.music {
     background: var(--warm-orange);
 }
 
@@ -482,7 +482,7 @@ section {
 
 .timeline-icon.literature {
     background: var(--deep-purple);
-}
+} */
 
 .timeline-icon.closing {
     background: #10B981;
