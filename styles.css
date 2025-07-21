@@ -40,7 +40,7 @@ body {
 }
 
 .language-toggle button {
-    background: var(--warm-orange);
+    background: #e5750e;
     color: white;
     border: none;
     padding: 8px 16px;
@@ -127,7 +127,8 @@ body {
 /* Hero Section */
 .hero {
     min-height: 100vh;
-    background: linear-gradient(135deg, var(--warm-orange), var(--coral), var(--deep-red));
+    /* background: linear-gradient(135deg, var(--warm-orange), var(--coral), var(--deep-red)); */
+    background-image: url("images/hero_pg_bg.png");
     display: flex;
     align-items: center;
     justify-content: center;
@@ -214,7 +215,7 @@ body {
 
 .info-item i {
     font-size: 2rem;
-    color: var(--warm-gold);
+    color: #f3d375;
     margin-bottom: 0.5rem;
 }
 
@@ -257,7 +258,7 @@ body {
 
 .register-btn {
     background: white;
-    color: var(--warm-orange);
+    color:#8d0707;
     border: none;
     padding: 1rem 2rem;
     border-radius: 50px;
@@ -315,7 +316,7 @@ section {
 .section-divider {
     width: 100px;
     height: 4px;
-    background: linear-gradient(to right, var(--warm-orange), var(--coral));
+    background: linear-gradient(to right,#b50000, #8d0707);
     margin: 0 auto 2rem;
     border-radius: 2px;
 }
@@ -340,7 +341,7 @@ section {
 }
 
 .about-image img {
-    width: 150%;
+    width: 100%;
     border-radius: 20px;
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
 }
