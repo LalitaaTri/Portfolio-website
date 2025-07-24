@@ -30,7 +30,8 @@ function updateContent() {
 
 // Countdown Timer
 function startCountdown() {
-    const targetDate = new Date('2024-12-15T09:00:00').getTime();
+    // Set to your event date and time (30 August 2025, 7:00 AM)
+    const targetDate = new Date('2025-08-30T07:00:00').getTime();
     
     function updateCountdown() {
         const now = new Date().getTime();
