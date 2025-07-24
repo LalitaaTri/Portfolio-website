@@ -23,7 +23,7 @@ body {
 
 /* Color Variables */
 :root {
-    --warm-orange: #FF7A00;
+    --warm-orange: #ff0000;
     --coral: #FF6B50;
     --deep-red: #C41E3A;
     --warm-gold: #F4A261;
@@ -40,7 +40,7 @@ body {
 }
 
 .language-toggle button {
-    background: #e5750e;
+    background: #cb0000;
     color: white;
     border: none;
     padding: 8px 16px;
@@ -53,7 +53,7 @@ body {
 }
 
 .language-toggle button:hover {
-    background: var(--deep-red);
+    background: #850000;
     transform: translateY(-2px);
 }
 
@@ -87,10 +87,10 @@ body {
     color: #333;
 }
 
-.nav-brand i {
+/* .nav-brand i {
     color: var(--warm-orange);
     font-size: 1.5rem;
-}
+} */
 
 .nav-menu {
     display: flex;
@@ -106,7 +106,7 @@ body {
 }
 
 .nav-menu a:hover {
-    color: var(--warm-orange);
+    color: #ff2525;
 }
 
 .nav-menu a::after {
@@ -116,7 +116,7 @@ body {
     left: 0;
     width: 0;
     height: 2px;
-    background: var(--warm-orange);
+    background: #ff2525;
     transition: width 0.3s ease;
 }
 
@@ -144,7 +144,7 @@ body {
     opacity: 0.1;
 }
 
-.hero-bg-pattern::before,
+/* .hero-bg-pattern::before,
 .hero-bg-pattern::after {
     content: '';
     position: absolute;
@@ -166,7 +166,7 @@ body {
     right: 15%;
     transform: rotate(45deg);
     border-radius: 0;
-}
+} */
 
 .hero-content {
     position: relative;
@@ -183,7 +183,7 @@ body {
 }
 
 .hero-highlight {
-    color: var(--warm-gold);
+    color: #ffd18a;
 }
 
 .hero-tagline {
@@ -215,7 +215,7 @@ body {
 
 .info-item i {
     font-size: 2rem;
-    color: #f3d375;
+    color: #ffd18a;
     margin-bottom: 0.5rem;
 }
 
@@ -258,7 +258,7 @@ body {
 
 .register-btn {
     background: white;
-    color:#8d0707;
+    color:#f20000;
     border: none;
     padding: 1rem 2rem;
     border-radius: 50px;
@@ -544,7 +544,7 @@ section {
 }
 
 .speaker-card {
-    background: linear-gradient(135deg, var(--warm-gray), white);
+    background: linear-gradient(135deg, #fff0d7, #e7d6bb);
     border-radius: 25px;
     padding: 2rem;
     text-align: center;
@@ -567,14 +567,14 @@ section {
     height: 150px;
     border-radius: 50%;
     object-fit: cover;
-    border: 4px solid var(--warm-orange);
+    border: 4px solid #b30000;
     margin: 0 auto;
     display: block;
     transition: border-color 0.3s ease;
 }
 
 .speaker-card:hover .speaker-image img {
-    border-color: var(--coral);
+    border-color: #de3232;
 }
 
 .speaker-icon {
@@ -613,7 +613,7 @@ section {
 .speaker-designation {
     font-weight: 500;
     margin-bottom: 1rem;
-    color: var(--warm-orange);
+    color: #c40000;
 }
 
 .speaker-bio {
