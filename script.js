@@ -85,16 +85,8 @@ function initSmoothScrolling() {
 
 // Registration Handler
 function handleRegistration() {
-    // Simple demo registration
-    const name = prompt(currentLanguage === 'english' ? 'Enter your name for registration:' : 'பதிவுக்காக உங்கள் பெயரை உள்ளிடுங்கள்:');
-    const email = prompt(currentLanguage === 'english' ? 'Enter your email:' : 'உங்கள் மின்னஞ்சலை உள்ளிடுங்கள்:');
-    
-    if (name && email) {
-        alert(currentLanguage === 'english' 
-            ? `Thank you ${name}! Your registration has been submitted. We'll send confirmation details to ${email}.`
-            : `நன்றி ${name}! உங்கள் பதிவு சமர்பிக்கப்பட்டது. உறுதிப்படுத்தல் விவரங்களை ${email} க்கு அனுப்புவோம்.`
-        );
-    }
+    // Open Google Form in a new tab
+    window.open("https://forms.gle/7XYndGoax4FotBAE6", "_blank");
 }
 
 // Scroll Animation for Fade-in Effects
