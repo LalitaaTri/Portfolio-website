@@ -86,7 +86,7 @@ function initSmoothScrolling() {
 // Registration Handler
 function handleRegistration() {
     // Open Google Form in a new tab
-    window.open("https://forms.gle/7XYndGoax4FotBAE6", "_blank");
+    window.open("https://forms.gle/KApbbFcJcrRHzmRW8", "_blank");
 }
 
 // Scroll Animation for Fade-in Effects
