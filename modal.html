@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal</title>
+    <link rel="stylesheet" href="modalstyles.css">
+</head>
+<body>
+    <button id="openAgendaModal" class="agenda-btn">View Fullscreen Agenda</button>
+    <div id="agendaModal" class="agenda-modal">
+      <div class="agenda-modal-content">
+        <button id="closeAgendaModal" class="close-btn">&times;</button>
+        <div class="agenda-images">
+          <img src="images/programme_schedule.png" alt="Programme Schedule English" class="agenda-img">
+          <img src="images/programme_schedule_tamil.png" alt="Programme Schedule Tamil" class="agenda-img">
+        </div>
+        <div class="agenda-downloads">
+          <a href="images/programme_schedule.png" download class="agenda-download-btn">Download English Agenda</a>
+          <a href="images/programme_schedule_tamil.png" download class="agenda-download-btn">Download Tamil Agenda</a>
+        </div>
+      </div>
+    </div>
+    <script>
+      const openBtn = document.getElementById('openAgendaModal');
+      const modal = document.getElementById('agendaModal');
+      const closeBtn = document.getElementById('closeAgendaModal');
+      openBtn.onclick = () => { modal.style.display = 'flex'; };
+      closeBtn.onclick = () => { modal.style.display = 'none'; };
+      modal.onclick = (e) => { if (e.target === modal) modal.style.display = 'none'; };
+    </script>
+</body>
+</html>

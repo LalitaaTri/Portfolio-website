@@ -16,6 +16,7 @@
     <!-- Styles -->
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="tablestyles.css">
+    <link rel="stylesheet" href="modalstyles.css">
 </head>
 <body>
     <!-- Language Toggle -->
@@ -91,8 +92,8 @@
                 </div>
             </div>
 
-            <button class="register-btn" onclick="handleRegistration()" data-en="Register Now!" data-ta="இப்போதே பதிவு செய்யுங்கள்!">
-                Register Now!<i class="fas fa-arrow-right"></i>
+            <button class="register-btn" onclick="handleRegistration()" data-en="Register Now" data-ta="இப்போதே பதிவு செய்யுங்களள்">
+                Register Now
             </button>
         </div>
 
@@ -105,7 +106,7 @@
     <section id="about" class="about">
         <div class="container">
             <div class="section-header">
-                <h2 data-en="About the Festival" data-ta="விழா பற்றி">About the Festival</h2>
+                <h2 data-en="About the Conference" data-ta="மாநாடு பற்றி">About the Conference</h2>
                 <div class="section-divider"></div>
             </div>
 
@@ -116,42 +117,6 @@
                 <div class="about-video" style="display: flex; justify-content: center; margin-top: 2rem;">
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/LXb3EKWsInQ" title="YouTube video preview" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="border-radius: 18px; box-shadow: 0 4px 20px rgba(0,0,0,0.10);"></iframe>
                 </div>
-                <!-- <div class="about-text">
-                    <p data-en="The Cultural Heritage Festival 2024 is a grand celebration of Tamil culture, bringing together communities to honor our rich traditions, vibrant arts, and timeless values. This festival showcases the beauty of Tamil literature, classical music, traditional dance, and culinary heritage." data-ta="கலாச்சார பாரம்பரிய விழா 2024 தமிழ் கலாச்சாரத்தின் பெருமைமிக்க கொண்டாட்டமாகும், இது நமது வளமான மரபுகள், துடிப்பான கலைகள் மற்றும் நித்ய மதிப்புகளை மதிக்க சமூகங்களை ஒன்றிணைக்கிறது. இந்த விழா தமிழ் இலக்கியம், சாகித்ய இசை, பாரம்பரிய நாட்டியம் மற்றும் சமையல் பாரம்பரியத்தின் அழகை வெளிப்படுத்துகிறது.">
-                        The Cultural Heritage Festival 2024 is a grand celebration of Tamil culture, bringing together communities to honor our rich traditions, vibrant arts, and timeless values. This festival showcases the beauty of Tamil literature, classical music, traditional dance, and culinary heritage.
-                    </p>
-                    
-                    <h3 data-en="Our Objectives" data-ta="எங்கள் நோக்கங்கள்">Our Objectives</h3>
-                    <div class="objectives">
-                        <div class="objective">
-                            <div class="objective-icon heritage">
-                                <i class="fas fa-heart"></i>
-                            </div>
-                            <div class="objective-content">
-                                <h4 data-en="Preserve Cultural Heritage" data-ta="கலாச்சார பாரம்பரியத்தை பாதுகாத்தல்">Preserve Cultural Heritage</h4>
-                                <p data-en="Safeguarding and promoting Tamil traditions for future generations through immersive cultural experiences." data-ta="அடுத்த தலைமுறையினருக்கு தமிழ் மரபுகளை பாதுகாத்து ஊக்குவித்தல் மூலம் கலாச்சார அனுபவங்களை வழங்குதல்.">Safeguarding and promoting Tamil traditions for future generations through immersive cultural experiences.</p>
-                            </div>
-                        </div>
-                        <div class="objective">
-                            <div class="objective-icon community">
-                                <i class="fas fa-users"></i>
-                            </div>
-                            <div class="objective-content">
-                                <h4 data-en="Build Community Connections" data-ta="சமூக தொடர்புகளை உருவாக்குதல்">Build Community Connections</h4>
-                                <p data-en="Fostering unity and strengthening bonds within the Tamil community and beyond." data-ta="தமிழ் சமூகத்திற்குள் மற்றும் அதற்கு அப்பால் ஒற்றுமையை வளர்த்து உறவுகளை வலுப்படுத்துதல்.">Fostering unity and strengthening bonds within the Tamil community and beyond.</p>
-                            </div>
-                        </div>
-                        <div class="objective">
-                            <div class="objective-icon arts">
-                                <i class="fas fa-star"></i>
-                            </div>
-                            <div class="objective-content">
-                                <h4 data-en="Celebrate Artistic Excellence" data-ta="கலை சிறப்பை கொண்டாடுதல்">Celebrate Artistic Excellence</h4>
-                                <p data-en="Showcasing the finest Tamil arts, from classical Bharatanatyam to contemporary expressions." data-ta="பாரம்பரிய பரதநாட்டியம் முதல் சமகால வெளிப்பாடுகள் வரை சிறந்த தமிழ் கலைகளை வெளிப்படுத்துதல்.">Showcasing the finest Tamil arts, from classical Bharatanatyam to contemporary expressions.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
             </div>
         </div>
     </section>
@@ -164,79 +129,77 @@
                 <div class="section-divider"></div>
             </div>
             <table>
-        <!-- <thead>
-            <tr>
-            <th>Header 1</th>
-            <th>Header 2</th>
-            </tr>
-        </thead> -->
-        <tbody>
-            <tr>
-            <td data-en="7:00am - 7:45am" data-ta="காலை மணி 7:00am - 7:45am">7:00am - 7:45am</td>
-            <td data-en="Registration and breakfast" data-ta="பதிவு/சிற்றுண்டி">Registration and breakfast</td>
-            </tr>
-            <tr>
-            <td data-en="7:45am - 8:15am" data-ta="காலை மணி 7:45am - 8:15am">7:45am - 8:15am</td>
-            <td data-en="63 Nayanmaars and Thirumoolar Procession and Thirumanthiram Paarayanam & Prayers" data-ta="உள்வீதி ஊர்வலம் – 63 நாயன்மார்கள் & திருமூலர் மற்றும் முதல் தந்திரம் பாராயணம் & பூசை">"63 Nayanmaars and Thirumoolar Procession and Thirumanthiram Paarayanam & Prayers</td>
-            </tr>
-            <tr>
-            <td data-en="8:15am - 8:30am" data-ta="காலை மணி 8:15am - 8:30am">8:15am - 8:30am</td>
-            <td data-en="Welcome Address" data-ta="வரவேற்புரை">Welcome Address</td>
-            </tr>
-            <tr>
-            <td data-en="8:30am - 9:00am" data-ta="காலை மணி 8:30am - 9:00am">8:30am - 9:00am</td>
-            <td data-en="Inaugural speech by Prof. Dr. Jayabalan Valliappan (President of the Malaysian Muruga Bhakti Peravai), (Title: Thirumoolar and Arunagirinathar)" data-ta="துவக்கவுரை - திருமூலரும் அருணகிரிநாதரும்: முனைவர் மரு. ஜெயபாலன் (மலேசிய முருக பக்தி பேரவை தலைவர்)">Inaugural speech by Prof. Dr. Jayabalan Valliappan (President of the Malaysian Muruga Bhakti Peravai), (Title: Thirumoolar and Arunagirinathar)</td>
-            </tr>
-            <tr>
-            <td data-en="9:00am - 9:10am" data-ta="காலை மணி 9:00am - 9:10am">9:00am - 9:10am</td>
-            <td data-en="Dance performance 1" data-ta="நடனம் 1">Dance performance 1</td>
-            </tr>
-            <tr>
-            <td data-en="9:10am - 9:55am" data-ta="காலை மணி 9:10am - 9:55am">9:10am - 9:55am</td>
-            <td data-en="Speech 1: Prof. Dr. T. Mahalakshmi (Founder, Thirumoolar Research Chair, Chennai), (Title: The greatness of Thirumanthiram)" data-ta="திருமந்திரத்தின் மகத்துவம்: பேரா. முனைவர் தி. மகாலட்சுமி  (நிறுவனர், திருமூலர் ஆய்விருக்கை, சென்னை, தமிழ்நாடு)">Speech 1: Prof. Dr. T. Mahalakshmi (Founder, Thirumoolar Research Chair, Chennai), (Title: The greatness of Thirumanthiram)</td>
-            </tr>
-            <tr>
-            <td data-en="9:55am - 10:45am" data-ta="காலை மணி 9:55am - 10:45am">9:55am - 10:45am</td>
-            <td data-en="Thirumoolar Thirumanthiram recitation led by Lt. Col. (R) Ir. Ts. Dr.Vikneswaran Munikanan and his students of Sachidananda Yogeeshwarar Paadashala" data-ta="திருமூலர் திருமந்திர பாராயணம்: Lt. Col. (R) Ir. Ts. Dr. விக்னேஸ்வரன் முனிகணன் தலைமையில் சச்சிதானந்த யோகீஸ்வரர் பாடசாலை மாணவர்கள், மலேசியா">Thirumoolar Thirumanthiram recitation led by Lt. Col. (R) Ir. Ts. Dr.Vikneswaran Munikanan and his students of Sachidananda Yogeeshwarar Paadashala</td>
-            </tr>
-            <tr>
-            <td data-en="7:00am - 7:45am" data-ta="காலை மணி 7:00am - 7:45am">10:45am - 11:30am</td>
-            <td data-en="Speech 2: Thiruvasaga Thendral Sivathiru.M.Sivakumar (Chairman, Thiruvannamalai Perundura Adiyar Group, Thiruvannamalai, Tamil Nadu), (Title: Thirumanthiram and Thiruvaasagam)" data-ta="திருமந்திரமும் திருவாசகமும்: திருவாசகத் தென்றல் சிவத்திரு. ம. சிவகுமார்  (நிறுவைத் தலைவர், திருவண்ணாமலை பெருந்துறை அடியார் குழு திருவண்ணாமலை, தமிழ்நாடு.)">Speech 2: Thiruvasaga Thendral Sivathiru.M.Sivakumar (Chairman, Thiruvannamalai Perundura Adiyar Group, Thiruvannamalai, Tamil Nadu), (Title: Thirumanthiram and Thiruvaasagam)</td>
-            </tr>
-            <tr>
-            <td data-en="11:30am - 11:40am" data-ta="காலை மணி 11:30am - 11:40am">11:30am - 11:40am</td>
-            <td data-en="Dance performance 2" data-ta="நடனம் 2">Dance performance 2</td>
-            </tr>
-            <tr>
-            <td data-en="11:40am - 12:25pm" data-ta="காலை மணி 11:40am - 12:25pm">11:40am - 12:25pm</td>
-            <td data-en="Speech 3: Thiruvarutpa Isaimaamani, Honorable Dr Jeeva Srinivasan (Advocate, Founder,Sanmarkka Sevai Maiyyam, Thirukoilur, Tamil Nadu), (Title: Thirumoolarin Nganakalanchiyam)" data-ta="திருமூலரின் ஞானக்களஞ்சியம்: திருவருட்பா இசைமாமணி ஜீவ சீனுவாசன் (நிறுவனர் மற்றும் வழக்கறிஞர், சன்மார்க்க சங்கம், திருக்கோயிலூர், தமிழ்நாடு) ">Speech 3: Thiruvarutpa Isaimaamani, Honorable Dr Jeeva Srinivasan (Advocate, Founder,Sanmarkka Sevai Maiyyam, Thirukoilur, Tamil Nadu), (Title: Thirumoolarin Nganakalanchiyam)</td>
-            </tr>
-            <tr>
-            <td data-en="12:25pm - 13:10pm" data-ta="நண்பகல் மணி 12:25pm - 13:10pm">12:25pm - 13:10pm</td>
-            <td data-en="Speech 4: Rtn. PP. PHF. Dr. S. Subramaniya Shiva (Ayurvedic and Herbal Medicine Consultant), (Title: Thirumanthirattil maruttuvam)" data-ta="திருமந்திரத்தில் மருத்துவம்: மரு. சு. சுப்பிரமணி சிவா (ஆயுர்வேத மற்றும் மூலிகை மருத்துவ ஆலோசகர், வயலூர், தமிழ்நாடு)">Speech 4: Rtn. PP. PHF. Dr. S. Subramaniya Shiva (Ayurvedic and Herbal Medicine Consultant), (Title: Thirumanthirattil maruttuvam)</td>
-            </tr>
-            <tr>
-            <td data-en="13:10pm - 14:10pm" data-ta="நண்பகல் மணி 13:10pm - 14:10pm">13:10pm - 14:10pm</td>
-            <td data-en="Lunch break" data-ta="மதிய உணவு">Lunch break</td>
-            </tr>
-            <tr>
-            <td data-en="14:10pm - 15:00pm" data-ta="நண்பகல் மணி 14:10pm - 15:00pm">14:10pm - 15:00pm</td>
-            <td data-en="Thirumoolar Thirumanthiram recitation led by Lt. Col. (R) Ir. Ts. Dr. Vikneswaran Munikanan and his students of Sachidananda Yogeeshwarar Paadashala" data-ta="திருமூலர் திருமந்திர பாராயணம்: Lt. Col. (R) Ir. Ts. Dr. விக்னேஸ்வரன் முனிகணன் தலைமையில் சச்சிதானந்த யோகீஸ்வரர் பாடசாலை மாணவர்கள், மலேசியா">Thirumoolar Thirumanthiram recitation led by Lt. Col. (R) Ir. Ts. Dr. Vikneswaran Munikanan and his students of Sachidananda Yogeeshwarar Paadashala</td>
-            </tr>
-            <tr>
-            <td data-en="15:00pm - 17:00pm" data-ta="நண்பகல் மணி 15:00pm - 17:00pm">15:00pm - 17:00pm</td>
-            <td data-en="Forum" data-ta="கருத்தரங்கம்">Forum</td>
-            </tr>
-            <tr>
-            <td data-en="17:00pm - 17:30pm" data-ta="பிற்பகல் மணி 17:00pm - 17:30pm">17:00pm - 17:30pm</td>
-            <td data-en="Vote of Thanks & Prayers" data-ta="நிகழ்ச்சி நிறைவுரை & பூசை ">Vote of Thanks & Prayers</td>
-            </tr>
-        </tbody>
-    </table>
-            <!-- <div class="agenda-images" style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center; margin-bottom: 2rem;">
+                <tr>
+                    <th data-en="Time" data-ta="நேரம்">Time</th>
+                    <th data-en="Agenda Item" data-ta="நிகழ்ச்சி விவரம்">Agenda Item</th>
+                </tr>
+                <tbody>
+                    <tr>
+                    <td data-en="7:00am - 7:45am" data-ta="காலை மணி 7:00am - 7:45am">7:00am - 7:45am</td>
+                    <td class="agenda-item" data-en="Registration and breakfast" data-ta="பதிவு/சிற்றுண்டி">Registration and breakfast</td>
+                    </tr>
+                    <tr>
+                    <td data-en="7:45am - 8:15am" data-ta="காலை மணி 7:45am - 8:15am">7:45am - 8:15am</td>
+                    <td class="agenda-item" data-en="63 Nayanmaars and Thirumoolar Procession and Thirumanthiram Paarayanam & Prayers" data-ta="உள்வீதி ஊர்வலம் – 63 நாயன்மார்கள் & திருமூலர் மற்றும் முதல் தந்திரம் பாராயணம் & பூசை">63 Nayanmaars and Thirumoolar Procession and Thirumanthiram Paarayanam & Prayers</td>
+                    </tr>
+                    <tr>
+                    <td data-en="8:15am - 8:30am" data-ta="காலை மணி 8:15am - 8:30am">8:15am - 8:30am</td>
+                    <td class="agenda-item" data-en="Welcome Address" data-ta="வரவேற்புரை">Welcome Address</td>
+                    </tr>
+                    <tr>
+                    <td data-en="8:30am - 9:00am" data-ta="காலை மணி 8:30am - 9:00am">8:30am - 9:00am</td>
+                    <td class="agenda-item" data-en="Inaugural speech by Prof. Dr. Jayabalan Valliappan (President of the Malaysian Muruga Bhakti Peravai), (Title: Thirumoolar and Arunagirinathar)" data-ta="துவக்கவுரை - திருமூலரும் அருணகிரிநாதரும்: முனைவர் மரு. ஜெயபாலன் (மலேசிய முருக பக்தி பேரவை தலைவர்)">Inaugural speech by Prof. Dr. Jayabalan Valliappan (President of the Malaysian Muruga Bhakti Peravai), (Title: Thirumoolar and Arunagirinathar)</td>
+                    </tr>
+                    <tr>
+                    <td data-en="9:00am - 9:10am" data-ta="காலை மணி 9:00am - 9:10am">9:00am - 9:10am</td>
+                    <td class="agenda-item" data-en="Dance performance 1" data-ta="நடனம் 1">Dance performance 1</td>
+                    </tr>
+                    <tr>
+                    <td data-en="9:10am - 9:55am" data-ta="காலை மணி 9:10am - 9:55am">9:10am - 9:55am</td>
+                    <td class="agenda-item" data-en="Speech 1: Prof. Dr. T. Mahalakshmi (Founder, Thirumoolar Research Chair, Chennai), (Title: The greatness of Thirumanthiram)" data-ta="திருமந்திரத்தின் மகத்துவம்: பேரா. முனைவர் தி. மகாலட்சுமி  (நிறுவனர், திருமூலர் ஆய்விருக்கை, சென்னை, தமிழ்நாடு)">Speech 1: Prof. Dr. T. Mahalakshmi (Founder, Thirumoolar Research Chair, Chennai), (Title: The greatness of Thirumanthiram)</td>
+                    </tr>
+                    <tr>
+                    <td data-en="9:55am - 10:45am" data-ta="காலை மணி 9:55am - 10:45am">9:55am - 10:45am</td>
+                    <td class="agenda-item" data-en="Thirumoolar Thirumanthiram recitation led by Lt. Col. (R) Ir. Ts. Dr.Vikneswaran Munikanan and his students of Sachidananda Yogeeshwarar Paadashala" data-ta="திருமூலர் திருமந்திர பாராயணம்: Lt. Col. (R) Ir. Ts. Dr. விக்னேஸ்வரன் முனிகணன் தலைமையில் சச்சிதானந்த யோகீஸ்வரர் பாடசாலை மாணவர்கள், மலேசியா">Thirumoolar Thirumanthiram recitation led by Lt. Col. (R) Ir. Ts. Dr.Vikneswaran Munikanan and his students of Sachidananda Yogeeshwarar Paadashala</td>
+                    </tr>
+                    <tr>
+                    <td data-en="7:00am - 7:45am" data-ta="காலை மணி 7:00am - 7:45am">10:45am - 11:30am</td>
+                    <td class="agenda-item" data-en="Speech 2: Thiruvasaga Thendral Sivathiru.M.Sivakumar (Chairman, Thiruvannamalai Perundura Adiyar Group, Thiruvannamalai, Tamil Nadu), (Title: Thirumanthiram and Thiruvaasagam)" data-ta="திருமந்திரமும் திருவாசகமும்: திருவாசகத் தென்றல் சிவத்திரு. ம. சிவகுமார்  (நிறுவைத் தலைவர், திருவண்ணாமலை பெருந்துறை அடியார் குழு திருவண்ணாமலை, தமிழ்நாடு.)">Speech 2: Thiruvasaga Thendral Sivathiru.M.Sivakumar (Chairman, Thiruvannamalai Perundura Adiyar Group, Thiruvannamalai, Tamil Nadu), (Title: Thirumanthiram and Thiruvaasagam)</td>
+                    </tr>
+                    <tr>
+                    <td data-en="11:30am - 11:40am" data-ta="காலை மணி 11:30am - 11:40am">11:30am - 11:40am</td>
+                    <td class="agenda-item" data-en="Dance performance 2" data-ta="நடனம் 2">Dance performance 2</td>
+                    </tr>
+                    <tr>
+                    <td data-en="11:40am - 12:25pm" data-ta="காலை மணி 11:40am - 12:25pm">11:40am - 12:25pm</td>
+                    <td class="agenda-item" data-en="Speech 3: Thiruvarutpa Isaimaamani, Honorable Dr Jeeva Srinivasan (Advocate, Founder,Sanmarkka Sevai Maiyyam, Thirukoilur, Tamil Nadu), (Title: Thirumoolarin Nganakalanchiyam)" data-ta="திருமூலரின் ஞானக்களஞ்சியம்: திருவருட்பா இசைமாமணி ஜீவ சீனுவாசன் (நிறுவனர் மற்றும் வழக்கறிஞர், சன்மார்க்க சங்கம், திருக்கோயிலூர், தமிழ்நாடு) ">Speech 3: Thiruvarutpa Isaimaamani, Honorable Dr Jeeva Srinivasan (Advocate, Founder,Sanmarkka Sevai Maiyyam, Thirukoilur, Tamil Nadu), (Title: Thirumoolarin Nganakalanchiyam)</td>
+                    </tr>
+                    <tr>
+                    <td data-en="12:25pm - 13:10pm" data-ta="நண்பகல் மணி 12:25pm - 13:10pm">12:25pm - 13:10pm</td>
+                    <td class="agenda-item" data-en="Speech 4: Rtn. PP. PHF. Dr. S. Subramaniya Shiva (Ayurvedic and Herbal Medicine Consultant), (Title: Thirumanthirattil maruttuvam)" data-ta="திருமந்திரத்தில் மருத்துவம்: மரு. சு. சுப்பிரமணி சிவா (ஆயுர்வேத மற்றும் மூலிகை மருத்துவ ஆலோசகர், வயலூர், தமிழ்நாடு)">Speech 4: Rtn. PP. PHF. Dr. S. Subramaniya Shiva (Ayurvedic and Herbal Medicine Consultant), (Title: Thirumanthirattil maruttuvam)</td>
+                    </tr>
+                    <tr>
+                    <td data-en="13:10pm - 14:10pm" data-ta="நண்பகல் மணி 13:10pm - 14:10pm">13:10pm - 14:10pm</td>
+                    <td class="agenda-item" data-en="Lunch break" data-ta="மதிய உணவு">Lunch break</td>
+                    </tr>
+                    <tr>
+                    <td data-en="14:10pm - 15:00pm" data-ta="நண்பகல் மணி 14:10pm - 15:00pm">14:10pm - 15:00pm</td>
+                    <td class="agenda-item" data-en="Thirumoolar Thirumanthiram recitation led by Lt. Col. (R) Ir. Ts. Dr. Vikneswaran Munikanan and his students of Sachidananda Yogeeshwarar Paadashala" data-ta="திருமூலர் திருமந்திர பாராயணம்: Lt. Col. (R) Ir. Ts. Dr. விக்னேஸ்வரன் முனிகணன் தலைமையில் சச்சிதானந்த யோகீஸ்வரர் பாடசாலை மாணவர்கள், மலேசியா">Thirumoolar Thirumanthiram recitation led by Lt. Col. (R) Ir. Ts. Dr. Vikneswaran Munikanan and his students of Sachidananda Yogeeshwarar Paadashala</td>
+                    </tr>
+                    <tr>
+                    <td data-en="15:00pm - 17:00pm" data-ta="நண்பகல் மணி 15:00pm - 17:00pm">15:00pm - 17:00pm</td>
+                    <td class="agenda-item" data-en="Forum" data-ta="கருத்தரங்கம்">Forum</td>
+                    </tr>
+                    <tr>
+                    <td data-en="17:00pm - 17:30pm" data-ta="பிற்பகல் மணி 17:00pm - 17:30pm">17:00pm - 17:30pm</td>
+                    <td class="agenda-item" data-en="Vote of Thanks & Prayers" data-ta="நிகழ்ச்சி நிறைவுரை & பூசை ">Vote of Thanks & Prayers</td>
+                    </tr>
+                </tbody>
+            </table> 
+            <div class="agenda-images" style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center; margin-bottom: 2rem;">
                 <img src="images/programme_schedule.png" alt="Programme Schedule English" style="max-width: 100%; height: auto; border-radius: 15px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); width: 900px;">
                 <img src="images/programme_schedule_tamil.png" alt="Programme Schedule Tamil" style="max-width: 100%; height: auto; border-radius: 15px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); width: 900px;">
-            </div> -->
+            </div>
             <div class="agenda-download-buttons" style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center; margin-bottom: 2.5rem;">
                 <a href="images/programme_schedule.png" download class="download-btn" 
                    data-en="Download English Agenda" data-ta="ஆங்கில நிகழ்ச்சி நிரலை பதிவிறக்கவும்"
@@ -245,6 +208,28 @@
                    data-en="Download Tamil Agenda" data-ta="தமிழ் நிகழ்ச்சி நிரலை பதிவிறக்கவும்"
                    style="background: #b50000; color: #fff; padding: 0.8rem 2rem; border-radius: 30px; font-weight: 600; text-decoration: none; box-shadow: 0 4px 20px rgba(0,0,0,0.08); transition: background 0.2s;">Download Tamil Agenda</a>
             </div> 
+            <!-- <button id="openAgendaModal" class="agenda-btn">View Fullscreen Agenda</button>
+            <div id="agendaModal" class="agenda-modal">
+                <div class="agenda-modal-content">
+                    <button id="closeAgendaModal" class="close-btn">&times;</button>
+                    <div class="agenda-images">
+                        <img src="images/programme_schedule.png" alt="Programme Schedule English" class="agenda-img">
+                        <img src="images/programme_schedule_tamil.png" alt="Programme Schedule Tamil" class="agenda-img">
+                    </div>
+                    <div class="agenda-downloads">
+                        <a href="images/programme_schedule.png" download class="agenda-download-btn">Download English Agenda</a>
+                        <a href="images/programme_schedule_tamil.png" download class="agenda-download-btn">Download Tamil Agenda</a>
+                    </div>
+                </div>
+            </div>
+            <script>
+                const openBtn = document.getElementById('openAgendaModal');
+                const modal = document.getElementById('agendaModal');
+                const closeBtn = document.getElementById('closeAgendaModal');
+                openBtn.onclick = () => { modal.style.display = 'flex'; };
+                closeBtn.onclick = () => { modal.style.display = 'none'; };
+                modal.onclick = (e) => { if (e.target === modal) modal.style.display = 'none'; };
+            </script> -->
         </div>
     </section>
 
@@ -323,6 +308,17 @@
             <div class="forum-grid">
                 <div class="speaker-card">
                     <div class="speaker-image">
+                        <img src="images/Tamilarasu.jpg" alt="Mr. Tamilarasu Subramaniam">
+                        <!-- <div class="speaker-icon heritage">
+                            <i class="fas fa-quote-left"></i>
+                        </div> -->
+                    </div>
+                    <h3 data-en="Mr. Tamilarasu Subramaniam" data-ta="தமிழரசு சுப்பிரமணியம்">Mr. Tamilarasu Subramaniam</h3>
+                    <p class="speaker-designation" data-en="Headmaster of Taman Sentosa Tamil School Klang, Presiden Persatuan Guru Besar Sekolah Tamil Negeri Selangor" data-ta="தாமான் செந்தோசா தமிழ் பள்ளி தலைமையாசிரியர், சிலாங்கூர் மாநில தமிழ் பள்ளி தலைமையாசிரியர் மன்றத் தலைவர்">Headmaster of Taman Sentosa Tamil School Klang, Presiden Persatuan Guru Besar Sekolah Tamil Negeri Selangor</p>
+                    <!-- <p class="speaker-bio" data-en="Research in Temple INNER ENGINEERING, related to body , mind and consciousness. Travel 100 over times to India, Egypt, and Japan for research purpose." data-ta="பழமையான மரபுகள் மற்றும் கலாச்சார பாதுகாப்பில் 30 ஆண்டுகளுக்கும் மேலான ஆராய்ச்சியுடன் தமிழ் பாரம்பரியத்தில் புகழ்பெற்ற நிபுணர். தமிழ் வரலாற்றில் 15 புத்தகங்களின் எழுத்தாளர்.">Renowned expert in Tamil heritage with over 30 years of research in ancient traditions and cultural preservation. Author of 15 books on Tamil history.</p> -->
+                </div>
+                <div class="speaker-card">
+                    <div class="speaker-image">
                         <img src="images/Brahmashri Kumuthsri.jpg" alt="Brahmashri Kumuthsri">
                         <!-- <div class="speaker-icon heritage">
                             <i class="fas fa-quote-left"></i>
@@ -365,17 +361,6 @@
                     <p class="speaker-designation" data-en="Researcher in Temple Inner Engineering" data-ta="கோயில் உள் பொறியியல் ஆய்வாளர்">Researcher in Temple Inner Engineering</p>
                     <!-- <p class="speaker-bio" data-en="Research in Temple INNER ENGINEERING, related to body , mind and consciousness. Travel 100 over times to India, Egypt, and Japan for research purpose." data-ta="பழமையான மரபுகள் மற்றும் கலாச்சார பாதுகாப்பில் 30 ஆண்டுகளுக்கும் மேலான ஆராய்ச்சியுடன் தமிழ் பாரம்பரியத்தில் புகழ்பெற்ற நிபுணர். தமிழ் வரலாற்றில் 15 புத்தகங்களின் எழுத்தாளர்.">Renowned expert in Tamil heritage with over 30 years of research in ancient traditions and cultural preservation. Author of 15 books on Tamil history.</p> -->
                 </div>
-                <div class="speaker-card">
-                    <div class="speaker-image">
-                        <img src="images/Tamilarasu.jpg" alt="Mr. Tamilarasu Subramaniam">
-                        <!-- <div class="speaker-icon heritage">
-                            <i class="fas fa-quote-left"></i>
-                        </div> -->
-                    </div>
-                    <h3 data-en="Mr. Tamilarasu Subramaniam" data-ta="தமிழரசு சுப்பிரமணியம்">Mr. Tamilarasu Subramaniam</h3>
-                    <p class="speaker-designation" data-en="Headmaster of Taman Sentosa Tamil School Klang, Presiden Persatuan Guru Besar Sekolah Tamil Negeri Selangor" data-ta="தாமான் செந்தோசா தமிழ் பள்ளி தலைமையாசிரியர், சிலாங்கூர் மாநில தமிழ் பள்ளி தலைமையாசிரியர் மன்றத் தலைவர்">Headmaster of Taman Sentosa Tamil School Klang, Presiden Persatuan Guru Besar Sekolah Tamil Negeri Selangor</p>
-                    <!-- <p class="speaker-bio" data-en="Research in Temple INNER ENGINEERING, related to body , mind and consciousness. Travel 100 over times to India, Egypt, and Japan for research purpose." data-ta="பழமையான மரபுகள் மற்றும் கலாச்சார பாதுகாப்பில் 30 ஆண்டுகளுக்கும் மேலான ஆராய்ச்சியுடன் தமிழ் பாரம்பரியத்தில் புகழ்பெற்ற நிபுணர். தமிழ் வரலாற்றில் 15 புத்தகங்களின் எழுத்தாளர்.">Renowned expert in Tamil heritage with over 30 years of research in ancient traditions and cultural preservation. Author of 15 books on Tamil history.</p> -->
-                </div>
             </div>
     </section>
 
@@ -414,7 +399,7 @@
                 </div>
 
                 <div class="partner-card">
-                    <img src="images/MHS.png" alt="Pertubuhan Pendidikan Sri Suria Kuala Lumpur & Selangor">
+                    <img src="images/PP.png" alt="Pertubuhan Pendidikan Sri Suria Kuala Lumpur & Selangor">
                     <h3 data-en="Pertubuhan Pendidikan Sri Suria Kuala Lumpur & Selangor" data-ta="ஸ்ரீ சூரியா கல்வி நிறுவனம் கோலாலம்பூர் & சிலாங்கூர்">Pertubuhan Pendidikan Sri Suria Kuala Lumpur & Selangor</h3>
                     <!-- <p data-en="Leading organization dedicated to preserving and promoting Tamil cultural heritage through educational programs and community initiatives." data-ta="கல்வி திட்டங்கள் மற்றும் சமூக முன்முயற்சிகள் மூலம் தமிழ் கலாச்சார பாரம்பரியத்தை பாதுகாத்து ஊக்குவிப்பதற்கு அர்பணிப்புடன் செயல்படும் முன்னணி அமைப்பு.">Leading organization dedicated to preserving and promoting Tamil cultural heritage through educational programs and community initiatives.</p> -->
                 </div>
@@ -433,20 +418,27 @@
     <section id="contact" class="contact">
         <div class="container">
             <div class="section-header">
-                <h2 data-en="Get In Touch" data-ta="தொடர்பில் இருங்கள்">Get In Touch</h2>
+                <h2 data-en="Contact" data-ta="தொடர்பு">Contact</h2>
                 <div class="section-divider"></div>
                 <p data-en="Have questions about the conference? We're here to help you with information and registration" data-ta="விழா பற்றி கேள்விகள் உள்ளதா? தகவல் மற்றும் பதிவுக்கு நாங்கள் உங்களுக்கு உதவ இங்கே இருக்கிறோம்">Have questions about the conference? We're here to help you with information and registration</p>
             </div>
 
             <div class="contact-content">
                 <div class="contact-info">
-                    <h3 data-en="Event Information" data-ta="நிகழ்வு தகவல்">Event Information</h3>
+                    <h3 data-en="Conference Information" data-ta="மாநாடு தகவல்">Conference Information</h3>
                     
                     <div class="contact-item">
                         <i class="fas fa-map-marker-alt"></i>
                         <div>
                             <h4 data-en="Address" data-ta="முகவரி">Address</h4>
                             <p data-en="Jalan SS 3/39, Sungai Way Free Trade Industrial Zone, 47300 Petaling Jaya, Selangor" data-ta="Jalan SS 3/39, Sungai Way Free Trade Industrial Zone, 47300 Petaling Jaya, Selangor">Jalan SS 3/39,<br> Sungai Way Free Trade Industrial Zone,<br> 47300 Petaling Jaya, Selangor</p>
+                            <p>
+                                <a href="https://goo.gl/maps/uNgh1EEcEDxThCzB6" target="_blank"
+                                     data-en="Click here for Location"
+                                     data-ta="இடத்திற்கு இங்கே கிளிக் செய்யவும்">
+                                    Click here for Location
+                                </a>
+                            </p>
                         </div>
                     </div>
 
@@ -469,7 +461,7 @@
                     <div class="contact-item">
                         <i class="fas fa-clock"></i>
                         <div>
-                            <h4 data-en="Event Hours" data-ta="நிகழ்வு நேரம்">Event Hours</h4>
+                            <h4 data-en="Conference Date & Time" data-ta="மாநாடு நேரம் & திகதி">Conference Date & Time</h4>
                             <p data-en="7:00 AM - 5:30 PM, 30 August 2025" data-ta="காலை 7:00 - பிற்பகல் 5:30, 30 ஆகஸ்ட் 2025">7:00 AM - 5:30 PM,<br>30 August 2025</p>
                         </div>
                     </div>
@@ -486,10 +478,9 @@
                 </div>
 
                 <div class="contact-map">
-                    <h3 data-en="Our Location" data-ta="எங்கள் இருப்பிடம்">Our Location</h3>
+                    <h3 data-en="Conference Location" data-ta="மாநாடு இடம்">Conference Location</h3>
                     <div class="map-placeholder">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.9906765824926!2d101.61237727497094!3d3.0971371968784815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc4c0976af358f%3A0x9e353ce27082b697!2sJalan%20SS%203%2F39%2C%2047300%20Petaling%20Jaya%2C%20Selangor!5e0!3m2!1sen!2smy!4v1753364742435!5m2!1sen!2smy" 
-                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!3m2!1sen!2smy!4v1754225018009!5m2!1sen!2smy!6m8!1m7!1sT22g5ObkqRGKHJIYfXKn2A!2m2!1d3.089018545242447!2d101.6149645105507!3f110.67311514403522!4f9.572896072125204!5f0.7820865974627469" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         <small data-en="Sri Sakthi Easwari Temple, Petaling Jaya, Selangor" data-ta="ஸ்ரீ சக்தி ஈஸ்வரி ஆலயம், பெட்டாலிங் ஜெயா, சிலாங்கூர்">Sri Sakthi Easwari Temple, Petaling Jaya, Selangor</small>
                     </div>
                 </div>
@@ -503,13 +494,13 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <div class="footer-brand">
-                        <!-- <i class="fas fa-om"></i> -->
-                        <!-- <span data-en="Cultural Heritage Festival" data-ta="கலாச்சார பாரம்பரிய விழா">Cultural Heritage Festival</span> -->
+                        <i class="fas fa-om"></i>
+                        <span data-en="Cultural Heritage Festival" data-ta="கலாச்சார பாரம்பரிய விழா">Cultural Heritage Festival</span>
                     </div>
-                    <!-- <p data-en="Celebrating Tamil culture and heritage through community, tradition, and artistic excellence. Join us in preserving our rich cultural legacy for future generations." data-ta="சமூகம், மரபு மற்றும் கலை சிறப்பு மூலம் தமிழ் கலாச்சாரம் மற்றும் பாரம்பரியத்தை கொண்டாடுகிறோம். அடுத்த தலைமுறையினருக்கு நமது வளமான கலாச்சார மரபை பாதுகாப்பதில் எங்களுடன் இணையுங்கள்.">Celebrating Tamil culture and heritage through community, tradition, and artistic excellence. Join us in preserving our rich cultural legacy for future generations.</p> -->
+                    <p data-en="Celebrating Tamil culture and heritage through community, tradition, and artistic excellence. Join us in preserving our rich cultural legacy for future generations." data-ta="சமூகம், மரபு மற்றும் கலை சிறப்பு மூலம் தமிழ் கலாச்சாரம் மற்றும் பாரம்பரியத்தை கொண்டாடுகிறோம். அடுத்த தலைமுறையினருக்கு நமது வளமான கலாச்சார மரபை பாதுகாப்பதில் எங்களுடன் இணையுங்கள்.">Celebrating Tamil culture and heritage through community, tradition, and artistic excellence. Join us in preserving our rich cultural legacy for future generations.</p>
                 </div>
 
-                <div class="footer-section">
+                <!-- <div class="footer-section">
                     <h4 data-en="Quick Links" data-ta="விரைவு இணைப்புகள்">Quick Links</h4>
                     <ul>
                         <li><a href="#home" data-en="Home" data-ta="முகப்பு">Home</a></li>
@@ -526,22 +517,21 @@
                         <li><a href="#contact" data-en="Contact" data-ta="தொடர்பு">Contact</a></li>
                         <li><a onclick="window.open('https://forms.gle/KApbbFcJcrRHzmRW8','_blank'); return false;" data-en="Registration" data-ta="பதிவு">Registration</a></li>
                     </ul>
-                </div>
+                </div> -->
 
-                <!-- <div class="footer-section">
+                <div class="footer-section">
                     <h4 data-en="Connect With Us" data-ta="எங்களுடன் இணையுங்கள்">Connect With Us</h4>
                     <div class="social-links">
-                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.facebook.com/MalaysiaArunagirinatharMandram/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="https://whatsapp.com/channel/0029Vb0jPs7KrWQz3ybMRR1K" target="_blank" aria-label="Whatsapp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.youtube.com/@MurugaBhakthiPeravai" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
                     </div>
-                </div> -->
+                </div>
             </div>
 
-            <!-- <div class="footer-bottom">
+            <div class="footer-bottom">
                 <p data-en="© 2025 Thirumanthira Maanaadu" data-ta="© 2025 திருமந்திர மாநாடு">© 2025 Thirumanthira Maanaadu</p>
-            </div> -->
+            </div>
         </div>
     </footer>
 

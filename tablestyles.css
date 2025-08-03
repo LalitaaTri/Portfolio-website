@@ -8,6 +8,8 @@ th, td {
   border: 3px solid #ba9595; /* Light grey border */
   padding: 8px;
   text-align: left; /* Aligns text to the left */
+  font-weight: bolder;
+  font-family: inherit; /* Ensures Tamil words use the same font weight */
 }
 
 th:first-child, td:first-child {
@@ -15,8 +17,8 @@ th:first-child, td:first-child {
 }
 
 th {
-  background-color: #fffcfc; /* Light grey background for headers */
-  color: #333; /* Darker text color for headers */
+  background-color: #550f0f; /* Light grey background for headers */
+  color: #ffe0e0; /* Darker text color for headers */
 }
 
 tr:nth-child(even) {
@@ -25,4 +27,9 @@ tr:nth-child(even) {
 
 tr:hover {
   background-color: #dfc4c4; /* Light hover effect for rows */
+}
+
+.agenda-item {
+  font-weight: 430;
+  font-family: inherit; /* Ensures Tamil words use the same font weight */
 }
