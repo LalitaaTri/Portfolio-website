@@ -5,20 +5,24 @@ table {
 }
 
 th, td {
-  border: 1px solid #ddd; /* Light grey border */
+  border: 3px solid #ba9595; /* Light grey border */
   padding: 8px;
   text-align: left; /* Aligns text to the left */
 }
 
+th:first-child, td:first-child {
+  width: 250px; /* Increase width for first column */
+}
+
 th {
-  background-color: #f2f2f2; /* Light grey background for headers */
+  background-color: #fffcfc; /* Light grey background for headers */
   color: #333; /* Darker text color for headers */
 }
 
 tr:nth-child(even) {
-  background-color: #f9f9f9; /* Zebra striping for readability */
+  background-color: #ffefef; /* Zebra striping for readability */
 }
 
 tr:hover {
-  background-color: #e9e9e9; /* Light hover effect for rows */
+  background-color: #dfc4c4; /* Light hover effect for rows */
 }
