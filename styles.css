@@ -34,16 +34,23 @@ body {
 /* Language Toggle */
 .language-toggle {
     position: fixed;
-    top: 20px;
+    top: 10px;
     right: 20px;
     z-index: 1000;
 }
+
+/* @media (max-width: 768px) {
+    .language-toggle {
+        top: 15px;
+        right: 20px;
+    }
+} */
 
 .language-toggle button {
     background: #cb0000;
     color: white;
     border: none;
-    padding: 8px 16px;
+    padding: 0.5rem 0.7rem; /* Increase vertical padding here too if needed */
     border-radius: 25px;
     font-size: 14px;
     font-weight: 500;
@@ -85,6 +92,12 @@ body {
     font-size: 1.2rem;
     font-weight: 700;
     color: #333;
+}
+
+@media (max-width: 768px) {
+    .nav-brand {
+        font-size: 0.97rem;
+    }
 }
 
 /* .nav-brand i {
@@ -626,19 +639,29 @@ section {
     font-weight: 600;
     margin-bottom: 0.5rem;
     color: #333;
+    word-wrap: break-word; /* Add this */
+    overflow-wrap: break-word; /* Add this */
+    hyphens: auto;
 }
 
 .speaker-designation {
     font-weight: 540;
     font-size: 1.15rem;
     margin-bottom: 1rem;
-    color: #ab0000;
+    color: #6b0000;
+    word-wrap: break-word; /* Add this */
+    hyphens: none; /* Add this */
+    line-height: 1.4; 
 }
+
 
 .speaker-bio {
     font-size: 1rem;
     line-height: 1.3;
     color: #4e4e4e;
+    word-wrap: break-word; /* Add this */
+    overflow-wrap: break-word; /* Add this */
+    hyphens: auto; /* Add this */
 }
 
 /* Partners Section */
@@ -1033,6 +1056,90 @@ section {
     transform: translateY(0);
 }
 
+
+
+/* Speakers Grid Layout */
+.speakers-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+/* Forum Grid Layout */
+.forum-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+/* Partners Grid Layout */
+.partners-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+/* Common Speaker Card Styling */
+.speaker-card {
+    flex: 0 1 300px; /* Don't grow, can shrink, base width 300px */
+    max-width: 350px;
+    min-width: 280px;
+    overflow: hidden;
+}
+
+/* Common Partner Card Styling */
+.partner-card {
+    flex: 0 1 280px; /* Don't grow, can shrink, base width 280px */
+    max-width: 320px;
+    min-width: 250px;
+}
+
+/* Scroll to Top Button */
+.scroll-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: #b50000;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 20px rgba(181, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    z-index: 1000;
+}
+
+.scroll-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.scroll-to-top:hover {
+    background: #8d0707;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 25px rgba(181, 0, 0, 0.4);
+}
+
+.scroll-to-top:active {
+    transform: translateY(-1px);
+}
+
+
+
+
 /* Accessibility */
 @media (prefers-reduced-motion: reduce) {
     * {
@@ -1044,4 +1151,8 @@ section {
     html {
         scroll-behavior: auto;
     }
+}
+
+.email {
+    font-size: 0.9rem;
 }
